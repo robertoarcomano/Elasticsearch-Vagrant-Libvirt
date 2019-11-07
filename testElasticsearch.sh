@@ -4,9 +4,14 @@
 # Global Vars
 VAR="catalog/users"
 
-get_node_name() {
-    local node_name=$(curl -X GET -H "Content-Type: application/json" "http://localhost:9200/" 2>/dev/null|jq -r ".name")
-    echo $node_name
+get_cluster() {
+  local value=$(curl -X GET -H "Content-Type: application/json" "http://localhost:9200/_cluster/health" 2>/dev/null|jq -r ".$1")
+  echo $value
+}
+
+get_host() {
+  local value=$(curl -X GET -H "Content-Type: application/json" "http://localhost:9200/" 2>/dev/null|jq -r ".$1")
+  echo $value
 }
 
 insert() {
@@ -49,8 +54,18 @@ delete() {
 }
 
 @test "Check Node Name" {
-  node_name=$(get_node_name)
-  [ "$node_name" = "myNode1" ]
+  node_name=$(get_host "name")
+  [ "$node_name" = "$HOSTNAME" ]
+}
+
+@test "Check Cluster Name" {
+  cluster_name=$(get_cluster "cluster_name")
+  [ "$cluster_name" = "Elasticsearch_Cluster" ]
+}
+
+@test "Check Cluster Status" {
+  status=$(get_cluster "status")
+  [ "$status" = "green" ]
 }
 
 @test "Insert and Read 10 items" {

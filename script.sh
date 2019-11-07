@@ -1,37 +1,31 @@
 #!/bin/bash
+# 0. Read Arguments
+MASTER=$1
 
-# env TZ=Europe/Dublin
-# ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+# 1. Update hosts file and elaborate hosts list
+cat /vagrant/hosts >> /etc/hosts
+LISTHOSTS=$(awk '{print "\""$1"\""}' /vagrant/hosts|tr "\n" ","|sed -r "s/,$//g")
 
-# Install packages
-# apt install -y openjdk-11-jre-headless mc
-# JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
-
-# USER=elastic
-# useradd -ms /bin/bash $USER
-# echo "export JAVA_HOME=$JAVA_HOME" >> /home/elastic/.profile
-
-# 1. Install base packages
+# 2. Install base packages
 apt-get install -y bats jq openjdk-11-jre-headless mc apt-transport-https
+IP=$(ip a|grep 192.168.10|awk '{print $2}'|awk -F'/' '{print $1}')
 
-# 2. Activate repository and install elasticsearch
+# 3. Activate repository and install elasticsearch
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 add-apt-repository "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
 apt-get update
 apt-get install -y elasticsearch
 
-# 3. Configure Elasticsearch
+# 4. Configure Elasticsearch
 echo "
 network.host: 0.0.0.0
-cluster.name: myCluster1
-node.name: \"myNode1\"
+cluster.name: Elasticsearch_Cluster
+node.name: \"$HOSTNAME\"
 cluster.initial_master_nodes:
-  - myNode1
+  - $MASTER
+discovery.zen.ping.unicast.hosts: [$LISTHOSTS]
 " >> /etc/elasticsearch/elasticsearch.yml
 
-# 4. Enable and start Elasticsearch
+# 5. Enable and start Elasticsearch
 systemctl enable elasticsearch.service
 systemctl start elasticsearch.service
-
-# 5. Launch Unit Test
-/vagrant/testElasticsearch.sh

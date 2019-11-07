@@ -1,469 +1,1405 @@
-START:  Wed 6 Nov 19:47:01 GMT 2019
-==> elasticsearch: Removing domain...
-Bringing machine 'elasticsearch' up with 'libvirt' provider...
-==> elasticsearch: Checking if box 'generic/ubuntu1804' version '1.9.38' is up to date...
-==> elasticsearch: Creating image (snapshot of base box volume).
-==> elasticsearch: Creating domain with the following settings...
-==> elasticsearch:  -- Name:              Elasticsearch-Vagrant-Libvirt_elasticsearch
-==> elasticsearch:  -- Domain type:       kvm
-==> elasticsearch:  -- Cpus:              2
-==> elasticsearch:  -- Feature:           acpi
-==> elasticsearch:  -- Feature:           apic
-==> elasticsearch:  -- Feature:           pae
-==> elasticsearch:  -- Memory:            4096M
-==> elasticsearch:  -- Management MAC:    
-==> elasticsearch:  -- Loader:            
-==> elasticsearch:  -- Nvram:             
-==> elasticsearch:  -- Base box:          generic/ubuntu1804
-==> elasticsearch:  -- Storage pool:      default
-==> elasticsearch:  -- Image:             /var/lib/libvirt/images/Elasticsearch-Vagrant-Libvirt_elasticsearch.img (32G)
-==> elasticsearch:  -- Volume Cache:      default
-==> elasticsearch:  -- Kernel:            
-==> elasticsearch:  -- Initrd:            
-==> elasticsearch:  -- Graphics Type:     vnc
-==> elasticsearch:  -- Graphics Port:     -1
-==> elasticsearch:  -- Graphics IP:       127.0.0.1
-==> elasticsearch:  -- Graphics Password: Not defined
-==> elasticsearch:  -- Video Type:        cirrus
-==> elasticsearch:  -- Video VRAM:        256
-==> elasticsearch:  -- Sound Type:	
-==> elasticsearch:  -- Keymap:            en-us
-==> elasticsearch:  -- TPM Path:          
-==> elasticsearch:  -- INPUT:             type=mouse, bus=ps2
-==> elasticsearch: Pruning invalid NFS exports. Administrator privileges will be required...
-==> elasticsearch: Creating shared folders metadata...
-==> elasticsearch: Starting domain.
-==> elasticsearch: Waiting for domain to get an IP address...
-==> elasticsearch: Waiting for SSH to become available...
-    elasticsearch: 
-    elasticsearch: Vagrant insecure key detected. Vagrant will automatically replace
-    elasticsearch: this with a newly generated keypair for better security.
-    elasticsearch: 
-    elasticsearch: Inserting generated public key within guest...
-    elasticsearch: Removing insecure key from the guest if it's present...
-    elasticsearch: Key inserted! Disconnecting and reconnecting using new SSH key...
-==> elasticsearch: Setting hostname...
-==> elasticsearch: Configuring and enabling network interfaces...
-==> elasticsearch: Installing NFS client...
-==> elasticsearch: Exporting NFS shared folders...
-==> elasticsearch: Preparing to edit /etc/exports. Administrator privileges will be required...
-==> elasticsearch: Mounting NFS shared folders...
-==> elasticsearch: Running provisioner: shell...
-    elasticsearch: Running: /tmp/vagrant-shell20191106-480151-1n33b98.sh
-    elasticsearch: Reading package lists...
-    elasticsearch: Building dependency tree...
-    elasticsearch: Reading state information...
-    elasticsearch: The following additional packages will be installed:
-    elasticsearch:   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
-    elasticsearch:   libasound2 libasound2-data libavahi-client3 libavahi-common-data
-    elasticsearch:   libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8 libjpeg8 libjq1
-    elasticsearch:   liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1 libxi6
-    elasticsearch:   libxrender1 libxtst6 mc-data x11-common
-    elasticsearch: Suggested packages:
-    elasticsearch:   default-jre libasound2-plugins alsa-utils cups-common liblcms2-utils pcscd
-    elasticsearch:   arj catdvi | texlive-binaries dbview djvulibre-bin genisoimage gv
-    elasticsearch:   imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python
-    elasticsearch:   python-boto python-tz xpdf | pdf-viewer libnss-mdns fonts-dejavu-extra
-    elasticsearch:   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
-    elasticsearch:   | fonts-wqy-zenhei fonts-indic
-    elasticsearch: The following NEW packages will be installed:
-    elasticsearch:   apt-transport-https bats ca-certificates-java fontconfig-config
-    elasticsearch:   fonts-dejavu-core java-common jq libasound2 libasound2-data libavahi-client3
-    elasticsearch:   libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8
-    elasticsearch:   libjpeg8 libjq1 liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1
-    elasticsearch:   libxi6 libxrender1 libxtst6 mc mc-data openjdk-11-jre-headless x11-common
-    elasticsearch: 0 upgraded, 30 newly installed, 0 to remove and 32 not upgraded.
-    elasticsearch: Need to get 43.0 MB of archives.
-    elasticsearch: After this operation, 192 MB of additional disk space will be used.
-    elasticsearch: Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.1 [110 kB]
-    elasticsearch: Get:2 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12 [1,692 B]
-    elasticsearch: Get:3 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 bats all 0.4.0-1.1 [14.3 kB]
-    elasticsearch: Get:4 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 java-common all 0.68ubuntu1~18.04.1 [14.5 kB]
-    elasticsearch: Get:5 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common-data amd64 0.7-3.1ubuntu1.2 [22.1 kB]
-    elasticsearch: Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common3 amd64 0.7-3.1ubuntu1.2 [21.6 kB]
-    elasticsearch: Get:7 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-client3 amd64 0.7-3.1ubuntu1.2 [25.2 kB]
-    elasticsearch: Get:8 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcups2 amd64 2.2.7-1ubuntu2.7 [211 kB]
-    elasticsearch: Get:9 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblcms2-2 amd64 2.9-1ubuntu0.1 [139 kB]
-    elasticsearch: Get:10 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]
-    elasticsearch: Get:11 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]
-    elasticsearch: Get:12 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
-    elasticsearch: Get:13 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
-    elasticsearch: Get:14 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libnspr4 amd64 2:4.18-1ubuntu1 [112 kB]
-    elasticsearch: Get:15 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss3 amd64 2:3.35-2ubuntu2.3 [1,136 kB]
-    elasticsearch: Get:16 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2-data all 1.1.3-5ubuntu0.2 [36.5 kB]
-    elasticsearch: Get:17 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2 amd64 1.1.3-5ubuntu0.2 [359 kB]
-    elasticsearch: Get:18 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libpcsclite1 amd64 1.8.23-1 [21.3 kB]
-    elasticsearch: Get:19 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxi6 amd64 2:1.7.9-1 [29.2 kB]
-    elasticsearch: Get:20 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxrender1 amd64 1:0.9.10-1 [18.7 kB]
-    elasticsearch: Get:21 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 x11-common all 1:7.7+19ubuntu7.1 [22.5 kB]
-    elasticsearch: Get:22 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxtst6 amd64 2:1.2.3-1 [12.8 kB]
-    elasticsearch: Get:23 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openjdk-11-jre-headless amd64 11.0.4+11-1ubuntu2~18.04.3 [37.4 MB]
-    elasticsearch: Get:24 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ca-certificates-java all 20180516ubuntu1~18.04.1 [12.2 kB]
-    elasticsearch: Get:25 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libonig4 amd64 6.7.0-1 [119 kB]
-    elasticsearch: Get:26 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libjq1 amd64 1.5+dfsg-2 [111 kB]
-    elasticsearch: Get:27 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 jq amd64 1.5+dfsg-2 [45.6 kB]
-    elasticsearch: Get:28 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libssh2-1 amd64 1.8.0-1 [73.2 kB]
-    elasticsearch: Get:29 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
-    elasticsearch: Get:30 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
-    elasticsearch: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    elasticsearch: Fetched 43.0 MB in 26s (1,642 kB/s)
-    elasticsearch: Selecting previously unselected package libjpeg-turbo8:amd64.
-    elasticsearch: (Reading database ... 
-    elasticsearch: (Reading database ... 5%
-    elasticsearch: (Reading database ... 10%
-    elasticsearch: (Reading database ... 15%
-    elasticsearch: (Reading database ... 20%
-    elasticsearch: (Reading database ... 25%
-    elasticsearch: (Reading database ... 30%
-    elasticsearch: (Reading database ... 35%
-    elasticsearch: (Reading database ... 40%
-    elasticsearch: (Reading database ... 45%
-    elasticsearch: (Reading database ... 50%
-    elasticsearch: (Reading database ... 55%
-    elasticsearch: (Reading database ... 60%
-    elasticsearch: (Reading database ... 65%
-    elasticsearch: (Reading database ... 70%
-    elasticsearch: (Reading database ... 75%
-    elasticsearch: (Reading database ... 80%
-    elasticsearch: (Reading database ... 85%
-    elasticsearch: (Reading database ... 90%
-    elasticsearch: (Reading database ... 95%
-    elasticsearch: (Reading database ... 100%
-    elasticsearch: (Reading database ... 
-    elasticsearch: 105688 files and directories currently installed.)
-    elasticsearch: Preparing to unpack .../00-libjpeg-turbo8_1.5.2-0ubuntu5.18.04.1_amd64.deb ...
-    elasticsearch: Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
-    elasticsearch: Selecting previously unselected package apt-transport-https.
-    elasticsearch: Preparing to unpack .../01-apt-transport-https_1.6.12_all.deb ...
-    elasticsearch: Unpacking apt-transport-https (1.6.12) ...
-    elasticsearch: Selecting previously unselected package bats.
-    elasticsearch: Preparing to unpack .../02-bats_0.4.0-1.1_all.deb ...
-    elasticsearch: Unpacking bats (0.4.0-1.1) ...
-    elasticsearch: Selecting previously unselected package java-common.
-    elasticsearch: Preparing to unpack .../03-java-common_0.68ubuntu1~18.04.1_all.deb ...
-    elasticsearch: Unpacking java-common (0.68ubuntu1~18.04.1) ...
-    elasticsearch: Selecting previously unselected package libavahi-common-data:amd64.
-    elasticsearch: Preparing to unpack .../04-libavahi-common-data_0.7-3.1ubuntu1.2_amd64.deb ...
-    elasticsearch: Unpacking libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
-    elasticsearch: Selecting previously unselected package libavahi-common3:amd64.
-    elasticsearch: Preparing to unpack .../05-libavahi-common3_0.7-3.1ubuntu1.2_amd64.deb ...
-    elasticsearch: Unpacking libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
-    elasticsearch: Selecting previously unselected package libavahi-client3:amd64.
-    elasticsearch: Preparing to unpack .../06-libavahi-client3_0.7-3.1ubuntu1.2_amd64.deb ...
-    elasticsearch: Unpacking libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
-    elasticsearch: Selecting previously unselected package libcups2:amd64.
-    elasticsearch: Preparing to unpack .../07-libcups2_2.2.7-1ubuntu2.7_amd64.deb ...
-    elasticsearch: Unpacking libcups2:amd64 (2.2.7-1ubuntu2.7) ...
-    elasticsearch: Selecting previously unselected package liblcms2-2:amd64.
-    elasticsearch: Preparing to unpack .../08-liblcms2-2_2.9-1ubuntu0.1_amd64.deb ...
-    elasticsearch: Unpacking liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
-    elasticsearch: Selecting previously unselected package libjpeg8:amd64.
-    elasticsearch: Preparing to unpack .../09-libjpeg8_8c-2ubuntu8_amd64.deb ...
-    elasticsearch: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
-    elasticsearch: Selecting previously unselected package fonts-dejavu-core.
-    elasticsearch: Preparing to unpack .../10-fonts-dejavu-core_2.37-1_all.deb ...
-    elasticsearch: Unpacking fonts-dejavu-core (2.37-1) ...
-    elasticsearch: Selecting previously unselected package fontconfig-config.
-    elasticsearch: Preparing to unpack .../11-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
-    elasticsearch: Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
-    elasticsearch: Selecting previously unselected package libfontconfig1:amd64.
-    elasticsearch: Preparing to unpack .../12-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
-    elasticsearch: Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
-    elasticsearch: Selecting previously unselected package libnspr4:amd64.
-    elasticsearch: Preparing to unpack .../13-libnspr4_2%3a4.18-1ubuntu1_amd64.deb ...
-    elasticsearch: Unpacking libnspr4:amd64 (2:4.18-1ubuntu1) ...
-    elasticsearch: Selecting previously unselected package libnss3:amd64.
-    elasticsearch: Preparing to unpack .../14-libnss3_2%3a3.35-2ubuntu2.3_amd64.deb ...
-    elasticsearch: Unpacking libnss3:amd64 (2:3.35-2ubuntu2.3) ...
-    elasticsearch: Selecting previously unselected package libasound2-data.
-    elasticsearch: Preparing to unpack .../15-libasound2-data_1.1.3-5ubuntu0.2_all.deb ...
-    elasticsearch: Unpacking libasound2-data (1.1.3-5ubuntu0.2) ...
-    elasticsearch: Selecting previously unselected package libasound2:amd64.
-    elasticsearch: Preparing to unpack .../16-libasound2_1.1.3-5ubuntu0.2_amd64.deb ...
-    elasticsearch: Unpacking libasound2:amd64 (1.1.3-5ubuntu0.2) ...
-    elasticsearch: Selecting previously unselected package libpcsclite1:amd64.
-    elasticsearch: Preparing to unpack .../17-libpcsclite1_1.8.23-1_amd64.deb ...
-    elasticsearch: Unpacking libpcsclite1:amd64 (1.8.23-1) ...
-    elasticsearch: Selecting previously unselected package libxi6:amd64.
-    elasticsearch: Preparing to unpack .../18-libxi6_2%3a1.7.9-1_amd64.deb ...
-    elasticsearch: Unpacking libxi6:amd64 (2:1.7.9-1) ...
-    elasticsearch: Selecting previously unselected package libxrender1:amd64.
-    elasticsearch: Preparing to unpack .../19-libxrender1_1%3a0.9.10-1_amd64.deb ...
-    elasticsearch: Unpacking libxrender1:amd64 (1:0.9.10-1) ...
-    elasticsearch: Selecting previously unselected package x11-common.
-    elasticsearch: Preparing to unpack .../20-x11-common_1%3a7.7+19ubuntu7.1_all.deb ...
-    elasticsearch: dpkg-query: no packages found matching nux-tools
-    elasticsearch: Unpacking x11-common (1:7.7+19ubuntu7.1) ...
-    elasticsearch: Selecting previously unselected package libxtst6:amd64.
-    elasticsearch: Preparing to unpack .../21-libxtst6_2%3a1.2.3-1_amd64.deb ...
-    elasticsearch: Unpacking libxtst6:amd64 (2:1.2.3-1) ...
-    elasticsearch: Selecting previously unselected package openjdk-11-jre-headless:amd64.
-    elasticsearch: Preparing to unpack .../22-openjdk-11-jre-headless_11.0.4+11-1ubuntu2~18.04.3_amd64.deb ...
-    elasticsearch: Unpacking openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
-    elasticsearch: Selecting previously unselected package ca-certificates-java.
-    elasticsearch: Preparing to unpack .../23-ca-certificates-java_20180516ubuntu1~18.04.1_all.deb ...
-    elasticsearch: Unpacking ca-certificates-java (20180516ubuntu1~18.04.1) ...
-    elasticsearch: Selecting previously unselected package libonig4:amd64.
-    elasticsearch: Preparing to unpack .../24-libonig4_6.7.0-1_amd64.deb ...
-    elasticsearch: Unpacking libonig4:amd64 (6.7.0-1) ...
-    elasticsearch: Selecting previously unselected package libjq1:amd64.
-    elasticsearch: Preparing to unpack .../25-libjq1_1.5+dfsg-2_amd64.deb ...
-    elasticsearch: Unpacking libjq1:amd64 (1.5+dfsg-2) ...
-    elasticsearch: Selecting previously unselected package jq.
-    elasticsearch: Preparing to unpack .../26-jq_1.5+dfsg-2_amd64.deb ...
-    elasticsearch: Unpacking jq (1.5+dfsg-2) ...
-    elasticsearch: Selecting previously unselected package libssh2-1:amd64.
-    elasticsearch: Preparing to unpack .../27-libssh2-1_1.8.0-1_amd64.deb ...
-    elasticsearch: Unpacking libssh2-1:amd64 (1.8.0-1) ...
-    elasticsearch: Selecting previously unselected package mc-data.
-    elasticsearch: Preparing to unpack .../28-mc-data_3%3a4.8.19-1_all.deb ...
-    elasticsearch: Unpacking mc-data (3:4.8.19-1) ...
-    elasticsearch: Selecting previously unselected package mc.
-    elasticsearch: Preparing to unpack .../29-mc_3%3a4.8.19-1_amd64.deb ...
-    elasticsearch: Unpacking mc (3:4.8.19-1) ...
-    elasticsearch: Setting up bats (0.4.0-1.1) ...
-    elasticsearch: Setting up libxi6:amd64 (2:1.7.9-1) ...
-    elasticsearch: Setting up apt-transport-https (1.6.12) ...
-    elasticsearch: Setting up liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
-    elasticsearch: Setting up libpcsclite1:amd64 (1.8.23-1) ...
-    elasticsearch: Setting up fonts-dejavu-core (2.37-1) ...
-    elasticsearch: Setting up libasound2-data (1.1.3-5ubuntu0.2) ...
-    elasticsearch: Setting up libonig4:amd64 (6.7.0-1) ...
-    elasticsearch: Setting up mc-data (3:4.8.19-1) ...
-    elasticsearch: Setting up java-common (0.68ubuntu1~18.04.1) ...
-    elasticsearch: Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
-    elasticsearch: Setting up libnspr4:amd64 (2:4.18-1ubuntu1) ...
-    elasticsearch: Setting up libasound2:amd64 (1.1.3-5ubuntu0.2) ...
-    elasticsearch: Setting up libjq1:amd64 (1.5+dfsg-2) ...
-    elasticsearch: Setting up libssh2-1:amd64 (1.8.0-1) ...
-    elasticsearch: Setting up libxrender1:amd64 (1:0.9.10-1) ...
-    elasticsearch: Setting up mc (3:4.8.19-1) ...
-    elasticsearch: Setting up x11-common (1:7.7+19ubuntu7.1) ...
-    elasticsearch: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
-    elasticsearch: Setting up libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
-    elasticsearch: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
-    elasticsearch: Setting up jq (1.5+dfsg-2) ...
-    elasticsearch: Setting up fontconfig-config (2.12.6-0ubuntu2) ...
-    elasticsearch: Setting up libnss3:amd64 (2:3.35-2ubuntu2.3) ...
-    elasticsearch: Setting up libxtst6:amd64 (2:1.2.3-1) ...
-    elasticsearch: Setting up libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
-    elasticsearch: Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
-    elasticsearch: Setting up libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
-    elasticsearch: Setting up libcups2:amd64 (2.2.7-1ubuntu2.7) ...
-    elasticsearch: Setting up openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
-    elasticsearch: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
-    elasticsearch: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
-    elasticsearch: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
-    elasticsearch: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
-    elasticsearch: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
-    elasticsearch: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
-    elasticsearch: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
-    elasticsearch: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
-    elasticsearch: Setting up ca-certificates-java (20180516ubuntu1~18.04.1) ...
-    elasticsearch: head: 
-    elasticsearch: cannot open '/etc/ssl/certs/java/cacerts' for reading
-    elasticsearch: : No such file or directory
-    elasticsearch: Adding debian:QuoVadis_Root_CA_2_G3.pem
-    elasticsearch: Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
-    elasticsearch: Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
-    elasticsearch: Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
-    elasticsearch: Adding debian:Taiwan_GRCA.pem
-    elasticsearch: Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
-    elasticsearch: Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
-    elasticsearch: Adding debian:SwissSign_Gold_CA_-_G2.pem
-    elasticsearch: Adding debian:CFCA_EV_ROOT.pem
-    elasticsearch: Adding debian:Security_Communication_Root_CA.pem
-    elasticsearch: Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
-    elasticsearch: Adding debian:COMODO_Certification_Authority.pem
-    elasticsearch: Adding debian:COMODO_RSA_Certification_Authority.pem
-    elasticsearch: Adding debian:CA_Disig_Root_R2.pem
-    elasticsearch: Adding debian:COMODO_ECC_Certification_Authority.pem
-    elasticsearch: Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
-    elasticsearch: Adding debian:Certigna.pem
-    elasticsearch: Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
-    elasticsearch: Adding debian:Comodo_AAA_Services_root.pem
-    elasticsearch: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
-    elasticsearch: Adding debian:Amazon_Root_CA_2.pem
-    elasticsearch: Adding debian:thawte_Primary_Root_CA_-_G2.pem
-    elasticsearch: Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
-    elasticsearch: Adding debian:Certplus_Root_CA_G2.pem
-    elasticsearch: Adding debian:SwissSign_Silver_CA_-_G2.pem
-    elasticsearch: Adding debian:Certplus_Class_2_Primary_CA.pem
-    elasticsearch: Adding debian:Entrust_Root_Certification_Authority.pem
-    elasticsearch: Adding debian:EE_Certification_Centre_Root_CA.pem
-    elasticsearch: Adding debian:DigiCert_Assured_ID_Root_G2.pem
-    elasticsearch: Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
-    elasticsearch: Adding debian:AddTrust_External_Root.pem
-    elasticsearch: Adding debian:AffirmTrust_Premium_ECC.pem
-    elasticsearch: Adding debian:Amazon_Root_CA_1.pem
-    elasticsearch: Adding debian:TrustCor_ECA-1.pem
-    elasticsearch: Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
-    elasticsearch: Adding debian:OpenTrust_Root_CA_G2.pem
-    elasticsearch: Adding debian:GlobalSign_Root_CA_-_R3.pem
-    elasticsearch: Adding debian:USERTrust_RSA_Certification_Authority.pem
-    elasticsearch: Adding debian:DigiCert_Global_Root_G3.pem
-    elasticsearch: Adding debian:Cybertrust_Global_Root.pem
-    elasticsearch: Adding debian:Hongkong_Post_Root_CA_1.pem
-    elasticsearch: Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
-    elasticsearch: Adding debian:SZAFIR_ROOT_CA2.pem
-    elasticsearch: Adding debian:TrustCor_RootCert_CA-1.pem
-    elasticsearch: Adding debian:Secure_Global_CA.pem
-    elasticsearch: Adding debian:TWCA_Root_Certification_Authority.pem
-    elasticsearch: Adding debian:DigiCert_Global_Root_G2.pem
-    elasticsearch: Adding debian:QuoVadis_Root_CA_2.pem
-    elasticsearch: Adding debian:Deutsche_Telekom_Root_CA_2.pem
-    elasticsearch: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
-    elasticsearch: Adding debian:AffirmTrust_Networking.pem
-    elasticsearch: Adding debian:GlobalSign_Root_CA.pem
-    elasticsearch: Adding debian:GeoTrust_Universal_CA.pem
-    elasticsearch: Adding debian:USERTrust_ECC_Certification_Authority.pem
-    elasticsearch: Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
-    elasticsearch: Adding debian:Certum_Trusted_Network_CA_2.pem
-    elasticsearch: Adding debian:TeliaSonera_Root_CA_v1.pem
-    elasticsearch: Adding debian:TWCA_Global_Root_CA.pem
-    elasticsearch: Adding debian:Baltimore_CyberTrust_Root.pem
-    elasticsearch: Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
-    elasticsearch: Adding debian:Buypass_Class_2_Root_CA.pem
-    elasticsearch: Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
-    elasticsearch: Adding debian:DigiCert_Assured_ID_Root_CA.pem
-    elasticsearch: Adding debian:OpenTrust_Root_CA_G1.pem
-    elasticsearch: Adding debian:Security_Communication_RootCA2.pem
-    elasticsearch: Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
-    elasticsearch: Adding debian:Atos_TrustedRoot_2011.pem
-    elasticsearch: Adding debian:Amazon_Root_CA_3.pem
-    elasticsearch: Adding debian:XRamp_Global_CA_Root.pem
-    elasticsearch: Adding debian:Visa_eCommerce_Root.pem
-    elasticsearch: Adding debian:Amazon_Root_CA_4.pem
-    elasticsearch: Adding debian:Starfield_Class_2_CA.pem
-    elasticsearch: Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
-    elasticsearch: Adding debian:Certum_Trusted_Network_CA.pem
-    elasticsearch: Adding debian:thawte_Primary_Root_CA.pem
-    elasticsearch: Adding debian:ACCVRAIZ1.pem
-    elasticsearch: Adding debian:ePKI_Root_Certification_Authority.pem
-    elasticsearch: Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
-    elasticsearch: Adding debian:DigiCert_Global_Root_CA.pem
-    elasticsearch: Adding debian:QuoVadis_Root_CA_3_G3.pem
-    elasticsearch: Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
-    elasticsearch: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
-    elasticsearch: Adding debian:thawte_Primary_Root_CA_-_G3.pem
-    elasticsearch: Adding debian:Chambers_of_Commerce_Root_-_2008.pem
-    elasticsearch: Adding debian:ISRG_Root_X1.pem
-    elasticsearch: Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
-    elasticsearch: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem
-    elasticsearch: Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
-    elasticsearch: Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
-    elasticsearch: Adding debian:SecureTrust_CA.pem
-    elasticsearch: Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem
-    elasticsearch: Adding debian:QuoVadis_Root_CA_1_G3.pem
-    elasticsearch: Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
-    elasticsearch: Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
-    elasticsearch: Adding debian:certSIGN_ROOT_CA.pem
-    elasticsearch: Adding debian:GeoTrust_Universal_CA_2.pem
-    elasticsearch: Adding debian:TrustCor_RootCert_CA-2.pem
-    elasticsearch: Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem
-    elasticsearch: Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
-    elasticsearch: Adding debian:Actalis_Authentication_Root_CA.pem
-    elasticsearch: Adding debian:SecureSign_RootCA11.pem
-    elasticsearch: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
-    elasticsearch: Adding debian:DigiCert_Trusted_Root_G4.pem
-    elasticsearch: Adding debian:GlobalSign_Root_CA_-_R2.pem
-    elasticsearch: Adding debian:LuxTrust_Global_Root_2.pem
-    elasticsearch: Adding debian:AffirmTrust_Commercial.pem
-    elasticsearch: Adding debian:Global_Chambersign_Root_-_2008.pem
-    elasticsearch: Adding debian:GeoTrust_Global_CA.pem
-    elasticsearch: Adding debian:DigiCert_Assured_ID_Root_G3.pem
-    elasticsearch: Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
-    elasticsearch: Adding debian:Network_Solutions_Certificate_Authority.pem
-    elasticsearch: Adding debian:OpenTrust_Root_CA_G3.pem
-    elasticsearch: Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
-    elasticsearch: Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem
-    elasticsearch: Adding debian:Certplus_Root_CA_G1.pem
-    elasticsearch: Adding debian:Trustis_FPS_Root_CA.pem
-    elasticsearch: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
-    elasticsearch: Adding debian:EC-ACC.pem
-    elasticsearch: Adding debian:AC_RAIZ_FNMT-RCM.pem
-    elasticsearch: Adding debian:IdenTrust_Commercial_Root_CA_1.pem
-    elasticsearch: Adding debian:DST_Root_CA_X3.pem
-    elasticsearch: Adding debian:QuoVadis_Root_CA_3.pem
-    elasticsearch: Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
-    elasticsearch: Adding debian:Sonera_Class_2_Root_CA.pem
-    elasticsearch: Adding debian:AffirmTrust_Premium.pem
-    elasticsearch: Adding debian:E-Tugra_Certification_Authority.pem
-    elasticsearch: Adding debian:GeoTrust_Primary_Certification_Authority.pem
-    elasticsearch: Adding debian:QuoVadis_Root_CA.pem
-    elasticsearch: Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
-    elasticsearch: Adding debian:Certinomis_-_Root_CA.pem
-    elasticsearch: Adding debian:Buypass_Class_3_Root_CA.pem
-    elasticsearch: Adding debian:Izenpe.com.pem
-    elasticsearch: Adding debian:Go_Daddy_Class_2_CA.pem
-    elasticsearch: done.
-    elasticsearch: Processing triggers for mime-support (3.60ubuntu1) ...
-    elasticsearch: Processing triggers for ureadahead (0.100.0-21) ...
-    elasticsearch: Processing triggers for libc-bin (2.27-3ubuntu1) ...
-    elasticsearch: Processing triggers for systemd (237-3ubuntu10.31) ...
-    elasticsearch: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-    elasticsearch: Processing triggers for ca-certificates (20180409) ...
-    elasticsearch: Updating certificates in /etc/ssl/certs...
-    elasticsearch: 0 added, 0 removed; done.
-    elasticsearch: Running hooks in /etc/ca-certificates/update.d...
-    elasticsearch: done.
-    elasticsearch: done.
-    elasticsearch: Warning: apt-key output should not be parsed (stdout is not a terminal)
-    elasticsearch: OK
-    elasticsearch: Hit:1 http://us.archive.ubuntu.com/ubuntu bionic InRelease
-    elasticsearch: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
-    elasticsearch: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
-    elasticsearch: Get:4 https://artifacts.elastic.co/packages/7.x/apt stable InRelease [7,124 B]
-    elasticsearch: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
-    elasticsearch: Get:6 https://artifacts.elastic.co/packages/7.x/apt stable/main i386 Packages [17.5 kB]
-    elasticsearch: Get:7 https://artifacts.elastic.co/packages/7.x/apt stable/main amd64 Packages [21.9 kB]
-    elasticsearch: Fetched 46.5 kB in 1s (45.4 kB/s)
-    elasticsearch: Reading package lists...
-    elasticsearch: Hit:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
-    elasticsearch: Hit:2 https://artifacts.elastic.co/packages/7.x/apt stable InRelease
-    elasticsearch: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic InRelease
-    elasticsearch: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
-    elasticsearch: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
-    elasticsearch: Reading package lists...
-    elasticsearch: Reading package lists...
-    elasticsearch: Building dependency tree...
-    elasticsearch: Reading state information...
-    elasticsearch: The following NEW packages will be installed:
-    elasticsearch:   elasticsearch
-    elasticsearch: 0 upgraded, 1 newly installed, 0 to remove and 32 not upgraded.
-    elasticsearch: Need to get 289 MB of archives.
-    elasticsearch: After this operation, 488 MB of additional disk space will be used.
-    elasticsearch: Get:1 https://artifacts.elastic.co/packages/7.x/apt stable/main amd64 elasticsearch amd64 7.4.2 [289 MB]
-    elasticsearch: dpkg-preconfigure: unable to re-open stdin: No such file or directory
-    elasticsearch: Fetched 289 MB in 12s (24.8 MB/s)
-    elasticsearch: Selecting previously unselected package elasticsearch.
-    elasticsearch: (Reading database ... 
-    elasticsearch: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
-    elasticsearch: (Reading database ... 60%
-    elasticsearch: (Reading database ... 65%
-    elasticsearch: (Reading database ... 70%
-    elasticsearch: (Reading database ... 75%
-    elasticsearch: (Reading database ... 80%
-    elasticsearch: (Reading database ... 85%
-    elasticsearch: (Reading database ... 90%
-    elasticsearch: (Reading database ... 95%
-    elasticsearch: (Reading database ... 100%(Reading database ... 106877 files and directories currently installed.)
-    elasticsearch: Preparing to unpack .../elasticsearch_7.4.2_amd64.deb ...
-    elasticsearch: Creating elasticsearch group...
-    elasticsearch:  OK
-    elasticsearch: Creating elasticsearch user...
-    elasticsearch:  OK
-    elasticsearch: Unpacking elasticsearch (7.4.2) ...
-    elasticsearch: Setting up elasticsearch (7.4.2) ...
-    elasticsearch: Created elasticsearch keystore in /etc/elasticsearch
-    elasticsearch: Processing triggers for ureadahead (0.100.0-21) ...
-    elasticsearch: Processing triggers for systemd (237-3ubuntu10.31) ...
-    elasticsearch: Synchronizing state of elasticsearch.service with SysV service script with /lib/systemd/systemd-sysv-install.
-    elasticsearch: Executing: /lib/systemd/systemd-sysv-install enable elasticsearch
-    elasticsearch: Created symlink /etc/systemd/system/multi-user.target.wants/elasticsearch.service → /usr/lib/systemd/system/elasticsearch.service.
-    elasticsearch: 1..4
-    elasticsearch: ok 1 Check Node Name
-    elasticsearch: ok 2 Insert and Read 10 items
-    elasticsearch: ok 3 Delete all
-    elasticsearch: ok 4 Implicit Insert and Read 10 items
-STOP:  Wed 6 Nov 19:50:13 GMT 2019
+START:  Thu 7 Nov 17:24:51 GMT 2019
+==> elasticnode3: Removing domain...
+==> elasticnode2: Removing domain...
+==> elasticnode1: Removing domain...
+Bringing machine 'elasticnode1' up with 'libvirt' provider...
+Bringing machine 'elasticnode2' up with 'libvirt' provider...
+Bringing machine 'elasticnode3' up with 'libvirt' provider...
+==> elasticnode1: Checking if box 'generic/ubuntu1804' version '1.9.38' is up to date...
+==> elasticnode2: Checking if box 'generic/ubuntu1804' version '1.9.38' is up to date...
+==> elasticnode3: Checking if box 'generic/ubuntu1804' version '1.9.38' is up to date...
+==> elasticnode2: Creating image (snapshot of base box volume).
+==> elasticnode3: Creating image (snapshot of base box volume).
+==> elasticnode1: Creating image (snapshot of base box volume).
+==> elasticnode2: Creating domain with the following settings...
+==> elasticnode2:  -- Name:              Elasticsearch-Vagrant-Libvirt_elasticnode2
+==> elasticnode3: Creating domain with the following settings...
+==> elasticnode2:  -- Domain type:       kvm
+==> elasticnode3:  -- Name:              Elasticsearch-Vagrant-Libvirt_elasticnode3
+==> elasticnode2:  -- Cpus:              2
+==> elasticnode2:  -- Feature:           acpi
+==> elasticnode1: Creating domain with the following settings...
+==> elasticnode2:  -- Feature:           apic
+==> elasticnode1:  -- Name:              Elasticsearch-Vagrant-Libvirt_elasticnode1
+==> elasticnode2:  -- Feature:           pae
+==> elasticnode3:  -- Domain type:       kvm
+==> elasticnode1:  -- Domain type:       kvm
+==> elasticnode2:  -- Memory:            2048M
+==> elasticnode1:  -- Cpus:              2
+==> elasticnode1:  -- Feature:           acpi
+==> elasticnode1:  -- Feature:           apic
+==> elasticnode3:  -- Cpus:              2
+==> elasticnode3:  -- Feature:           acpi
+==> elasticnode1:  -- Feature:           pae
+==> elasticnode2:  -- Management MAC:    
+==> elasticnode1:  -- Memory:            2048M
+==> elasticnode1:  -- Management MAC:    
+==> elasticnode2:  -- Loader:            
+==> elasticnode3:  -- Feature:           apic
+==> elasticnode1:  -- Loader:            
+==> elasticnode2:  -- Nvram:             
+==> elasticnode3:  -- Feature:           pae
+==> elasticnode3:  -- Memory:            2048M
+==> elasticnode3:  -- Management MAC:    
+==> elasticnode1:  -- Nvram:             
+==> elasticnode1:  -- Base box:          generic/ubuntu1804
+==> elasticnode3:  -- Loader:            
+==> elasticnode3:  -- Nvram:             
+==> elasticnode3:  -- Base box:          generic/ubuntu1804
+==> elasticnode3:  -- Storage pool:      default
+==> elasticnode1:  -- Storage pool:      default
+==> elasticnode3:  -- Image:             /var/lib/libvirt/images/Elasticsearch-Vagrant-Libvirt_elasticnode3.img (32G)
+==> elasticnode1:  -- Image:             /var/lib/libvirt/images/Elasticsearch-Vagrant-Libvirt_elasticnode1.img (32G)
+==> elasticnode1:  -- Volume Cache:      default
+==> elasticnode2:  -- Base box:          generic/ubuntu1804
+==> elasticnode3:  -- Volume Cache:      default
+==> elasticnode1:  -- Kernel:            
+==> elasticnode3:  -- Kernel:            
+==> elasticnode3:  -- Initrd:            
+==> elasticnode3:  -- Graphics Type:     vnc
+==> elasticnode3:  -- Graphics Port:     -1
+==> elasticnode3:  -- Graphics IP:       127.0.0.1
+==> elasticnode3:  -- Graphics Password: Not defined
+==> elasticnode3:  -- Video Type:        cirrus
+==> elasticnode3:  -- Video VRAM:        256
+==> elasticnode3:  -- Sound Type:	
+==> elasticnode2:  -- Storage pool:      default
+==> elasticnode3:  -- Keymap:            en-us
+==> elasticnode2:  -- Image:             /var/lib/libvirt/images/Elasticsearch-Vagrant-Libvirt_elasticnode2.img (32G)
+==> elasticnode3:  -- TPM Path:          
+==> elasticnode3:  -- INPUT:             type=mouse, bus=ps2
+==> elasticnode1:  -- Initrd:            
+==> elasticnode2:  -- Volume Cache:      default
+==> elasticnode2:  -- Kernel:            
+==> elasticnode1:  -- Graphics Type:     vnc
+==> elasticnode1:  -- Graphics Port:     -1
+==> elasticnode2:  -- Initrd:            
+==> elasticnode1:  -- Graphics IP:       127.0.0.1
+==> elasticnode2:  -- Graphics Type:     vnc
+==> elasticnode3: Pruning invalid NFS exports. Administrator privileges will be required...
+==> elasticnode2:  -- Graphics Port:     -1
+==> elasticnode2:  -- Graphics IP:       127.0.0.1
+==> elasticnode1:  -- Graphics Password: Not defined
+==> elasticnode2:  -- Graphics Password: Not defined
+==> elasticnode1:  -- Video Type:        cirrus
+==> elasticnode1:  -- Video VRAM:        256
+==> elasticnode2:  -- Video Type:        cirrus
+==> elasticnode2:  -- Video VRAM:        256
+==> elasticnode2:  -- Sound Type:	
+==> elasticnode2:  -- Keymap:            en-us
+==> elasticnode2:  -- TPM Path:          
+==> elasticnode2:  -- INPUT:             type=mouse, bus=ps2
+==> elasticnode1:  -- Sound Type:	
+==> elasticnode1:  -- Keymap:            en-us
+==> elasticnode1:  -- TPM Path:          
+==> elasticnode1:  -- INPUT:             type=mouse, bus=ps2
+==> elasticnode2: Creating shared folders metadata...
+==> elasticnode2: Starting domain.
+==> elasticnode1: Creating shared folders metadata...
+==> elasticnode2: Waiting for domain to get an IP address...
+==> elasticnode3: Creating shared folders metadata...
+==> elasticnode1: Starting domain.
+==> elasticnode3: Starting domain.
+==> elasticnode1: Waiting for domain to get an IP address...
+==> elasticnode3: Waiting for domain to get an IP address...
+==> elasticnode2: Waiting for SSH to become available...
+    elasticnode2: 
+    elasticnode2: Vagrant insecure key detected. Vagrant will automatically replace
+    elasticnode2: this with a newly generated keypair for better security.
+==> elasticnode3: Waiting for SSH to become available...
+==> elasticnode1: Waiting for SSH to become available...
+    elasticnode2: 
+    elasticnode2: Inserting generated public key within guest...
+    elasticnode2: Removing insecure key from the guest if it's present...
+    elasticnode2: Key inserted! Disconnecting and reconnecting using new SSH key...
+    elasticnode3: 
+    elasticnode3: Vagrant insecure key detected. Vagrant will automatically replace
+    elasticnode3: this with a newly generated keypair for better security.
+    elasticnode1: 
+    elasticnode1: Vagrant insecure key detected. Vagrant will automatically replace
+    elasticnode1: this with a newly generated keypair for better security.
+==> elasticnode2: Setting hostname...
+==> elasticnode2: Configuring and enabling network interfaces...
+    elasticnode1: 
+    elasticnode1: Inserting generated public key within guest...
+    elasticnode3: 
+    elasticnode3: Inserting generated public key within guest...
+    elasticnode1: Removing insecure key from the guest if it's present...
+    elasticnode3: Removing insecure key from the guest if it's present...
+    elasticnode1: Key inserted! Disconnecting and reconnecting using new SSH key...
+    elasticnode3: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> elasticnode1: Setting hostname...
+==> elasticnode3: Setting hostname...
+==> elasticnode3: Configuring and enabling network interfaces...
+==> elasticnode1: Configuring and enabling network interfaces...
+==> elasticnode2: Installing NFS client...
+==> elasticnode1: Installing NFS client...
+==> elasticnode3: Installing NFS client...
+==> elasticnode2: Exporting NFS shared folders...
+==> elasticnode2: Preparing to edit /etc/exports. Administrator privileges will be required...
+==> elasticnode2: Mounting NFS shared folders...
+==> elasticnode2: Running provisioner: shell...
+    elasticnode2: Running: /tmp/vagrant-shell20191107-821939-1s84rih.sh
+    elasticnode2: Reading package lists...
+    elasticnode2: Building dependency tree...
+==> elasticnode3: Exporting NFS shared folders...
+==> elasticnode3: Preparing to edit /etc/exports. Administrator privileges will be required...
+    elasticnode2: Reading state information...
+    elasticnode2: The following additional packages will be installed:
+    elasticnode2:   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
+    elasticnode2:   libasound2 libasound2-data libavahi-client3 libavahi-common-data
+    elasticnode2:   libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8 libjpeg8 libjq1
+    elasticnode2:   liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1 libxi6
+    elasticnode2:   libxrender1 libxtst6 mc-data x11-common
+    elasticnode2: Suggested packages:
+    elasticnode2:   default-jre libasound2-plugins alsa-utils cups-common liblcms2-utils pcscd
+    elasticnode2:   arj catdvi | texlive-binaries dbview djvulibre-bin genisoimage gv
+    elasticnode2:   imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python
+    elasticnode2:   python-boto python-tz xpdf | pdf-viewer libnss-mdns fonts-dejavu-extra
+    elasticnode2:   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+    elasticnode2:   | fonts-wqy-zenhei fonts-indic
+    elasticnode2: The following NEW packages will be installed:
+    elasticnode2:   apt-transport-https bats ca-certificates-java fontconfig-config
+    elasticnode2:   fonts-dejavu-core java-common jq libasound2 libasound2-data libavahi-client3
+    elasticnode2:   libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8
+    elasticnode2:   libjpeg8 libjq1 liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1
+    elasticnode2:   libxi6 libxrender1 libxtst6 mc mc-data openjdk-11-jre-headless x11-common
+==> elasticnode3: Mounting NFS shared folders...
+==> elasticnode1: Exporting NFS shared folders...
+==> elasticnode1: Preparing to edit /etc/exports. Administrator privileges will be required...
+    elasticnode2: 0 upgraded, 30 newly installed, 0 to remove and 34 not upgraded.
+    elasticnode2: Need to get 43.0 MB of archives.
+    elasticnode2: After this operation, 192 MB of additional disk space will be used.
+    elasticnode2: Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.1 [110 kB]
+==> elasticnode1: Mounting NFS shared folders...
+    elasticnode2: Get:2 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12 [1,692 B]
+    elasticnode2: Get:3 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 bats all 0.4.0-1.1 [14.3 kB]
+==> elasticnode3: Running provisioner: shell...
+    elasticnode2: Get:4 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 java-common all 0.68ubuntu1~18.04.1 [14.5 kB]
+    elasticnode3: Running: /tmp/vagrant-shell20191107-821939-7kgavs.sh
+    elasticnode3: Reading package lists...
+    elasticnode3: Building dependency tree...
+    elasticnode2: Get:5 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common-data amd64 0.7-3.1ubuntu1.2 [22.1 kB]
+==> elasticnode1: Running provisioner: shell...
+    elasticnode2: Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common3 amd64 0.7-3.1ubuntu1.2 [21.6 kB]
+    elasticnode1: Running: /tmp/vagrant-shell20191107-821939-11ptiv6.sh
+    elasticnode3: 
+    elasticnode3: Reading state information...
+    elasticnode1: Reading package lists...
+    elasticnode1: Building dependency tree...
+    elasticnode3: The following additional packages will be installed:
+    elasticnode3:   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
+    elasticnode3:   libasound2 libasound2-data libavahi-client3 libavahi-common-data
+    elasticnode3:   libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8 libjpeg8 libjq1
+    elasticnode3:   liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1 libxi6
+    elasticnode3:   libxrender1 libxtst6 mc-data x11-common
+    elasticnode3: Suggested packages:
+    elasticnode3:   default-jre libasound2-plugins alsa-utils cups-common liblcms2-utils pcscd
+    elasticnode3:   arj catdvi | texlive-binaries dbview djvulibre-bin genisoimage gv
+    elasticnode3:   imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python
+    elasticnode3:   python-boto python-tz xpdf | pdf-viewer libnss-mdns fonts-dejavu-extra
+    elasticnode3:   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+    elasticnode3:   | fonts-wqy-zenhei fonts-indic
+    elasticnode3: The following NEW packages will be installed:
+    elasticnode3:   apt-transport-https bats ca-certificates-java fontconfig-config
+    elasticnode3:   fonts-dejavu-core java-common jq libasound2 libasound2-data libavahi-client3
+    elasticnode3:   libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8
+    elasticnode3:   libjpeg8 libjq1 liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1
+    elasticnode3:   libxi6 libxrender1 libxtst6 mc mc-data openjdk-11-jre-headless x11-common
+    elasticnode2: Get:7 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-client3 amd64 0.7-3.1ubuntu1.2 [25.2 kB]
+    elasticnode1: 
+    elasticnode1: Reading state information...
+    elasticnode3: 0 upgraded, 30 newly installed, 0 to remove and 34 not upgraded.
+    elasticnode3: Need to get 43.0 MB of archives.
+    elasticnode3: After this operation, 192 MB of additional disk space will be used.
+    elasticnode3: Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.1 [110 kB]
+    elasticnode2: Get:8 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcups2 amd64 2.2.7-1ubuntu2.7 [211 kB]
+    elasticnode1: The following additional packages will be installed:
+    elasticnode1:   ca-certificates-java fontconfig-config fonts-dejavu-core java-common
+    elasticnode1:   libasound2 libasound2-data libavahi-client3 libavahi-common-data
+    elasticnode1:   libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8 libjpeg8 libjq1
+    elasticnode1:   liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1 libxi6
+    elasticnode1:   libxrender1 libxtst6 mc-data x11-common
+    elasticnode1: Suggested packages:
+    elasticnode1:   default-jre libasound2-plugins alsa-utils cups-common liblcms2-utils pcscd
+    elasticnode1:   arj catdvi | texlive-binaries dbview djvulibre-bin genisoimage gv
+    elasticnode1:   imagemagick libaspell-dev links | w3m | lynx odt2txt poppler-utils python
+    elasticnode1:   python-boto python-tz xpdf | pdf-viewer libnss-mdns fonts-dejavu-extra
+    elasticnode1:   fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+    elasticnode1:   | fonts-wqy-zenhei fonts-indic
+    elasticnode1: The following NEW packages will be installed:
+    elasticnode1:   apt-transport-https bats ca-certificates-java fontconfig-config
+    elasticnode1:   fonts-dejavu-core java-common jq libasound2 libasound2-data libavahi-client3
+    elasticnode1:   libavahi-common-data libavahi-common3 libcups2 libfontconfig1 libjpeg-turbo8
+    elasticnode1:   libjpeg8 libjq1 liblcms2-2 libnspr4 libnss3 libonig4 libpcsclite1 libssh2-1
+    elasticnode1:   libxi6 libxrender1 libxtst6 mc mc-data openjdk-11-jre-headless x11-common
+    elasticnode3: Get:2 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12 [1,692 B]
+    elasticnode1: 0 upgraded, 30 newly installed, 0 to remove and 34 not upgraded.
+    elasticnode1: Need to get 43.0 MB of archives.
+    elasticnode1: After this operation, 192 MB of additional disk space will be used.
+    elasticnode1: Get:1 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libjpeg-turbo8 amd64 1.5.2-0ubuntu5.18.04.1 [110 kB]
+    elasticnode2: Get:9 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblcms2-2 amd64 2.9-1ubuntu0.1 [139 kB]
+    elasticnode3: Get:3 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 bats all 0.4.0-1.1 [14.3 kB]
+    elasticnode3: Get:4 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 java-common all 0.68ubuntu1~18.04.1 [14.5 kB]
+    elasticnode1: Get:2 http://us.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 apt-transport-https all 1.6.12 [1,692 B]
+    elasticnode2: Get:10 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]
+    elasticnode3: Get:5 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common-data amd64 0.7-3.1ubuntu1.2 [22.1 kB]
+    elasticnode1: Get:3 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 bats all 0.4.0-1.1 [14.3 kB]
+    elasticnode2: Get:11 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]
+    elasticnode3: Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common3 amd64 0.7-3.1ubuntu1.2 [21.6 kB]
+    elasticnode1: Get:4 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 java-common all 0.68ubuntu1~18.04.1 [14.5 kB]
+    elasticnode1: Get:5 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common-data amd64 0.7-3.1ubuntu1.2 [22.1 kB]
+    elasticnode3: Get:7 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-client3 amd64 0.7-3.1ubuntu1.2 [25.2 kB]
+    elasticnode2: Get:12 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
+    elasticnode1: Get:6 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-common3 amd64 0.7-3.1ubuntu1.2 [21.6 kB]
+    elasticnode3: Get:8 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcups2 amd64 2.2.7-1ubuntu2.7 [211 kB]
+    elasticnode1: Get:7 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libavahi-client3 amd64 0.7-3.1ubuntu1.2 [25.2 kB]
+    elasticnode2: Get:13 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
+    elasticnode1: Get:8 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libcups2 amd64 2.2.7-1ubuntu2.7 [211 kB]
+    elasticnode3: Get:9 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblcms2-2 amd64 2.9-1ubuntu0.1 [139 kB]
+    elasticnode2: Get:14 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libnspr4 amd64 2:4.18-1ubuntu1 [112 kB]
+    elasticnode1: Get:9 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 liblcms2-2 amd64 2.9-1ubuntu0.1 [139 kB]
+    elasticnode3: Get:10 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]
+    elasticnode3: Get:11 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]
+    elasticnode2: Get:15 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss3 amd64 2:3.35-2ubuntu2.3 [1,136 kB]
+    elasticnode1: Get:10 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]
+    elasticnode1: Get:11 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]
+    elasticnode3: Get:12 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
+    elasticnode2: Get:16 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2-data all 1.1.3-5ubuntu0.2 [36.5 kB]
+    elasticnode2: Get:17 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2 amd64 1.1.3-5ubuntu0.2 [359 kB]
+    elasticnode3: Get:13 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
+    elasticnode1: Get:12 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 fontconfig-config all 2.12.6-0ubuntu2 [55.8 kB]
+    elasticnode1: Get:13 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libfontconfig1 amd64 2.12.6-0ubuntu2 [137 kB]
+    elasticnode3: Get:14 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libnspr4 amd64 2:4.18-1ubuntu1 [112 kB]
+    elasticnode2: Get:18 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libpcsclite1 amd64 1.8.23-1 [21.3 kB]
+    elasticnode2: Get:19 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxi6 amd64 2:1.7.9-1 [29.2 kB]
+    elasticnode3: Get:15 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss3 amd64 2:3.35-2ubuntu2.3 [1,136 kB]
+    elasticnode1: Get:14 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libnspr4 amd64 2:4.18-1ubuntu1 [112 kB]
+    elasticnode2: Get:20 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxrender1 amd64 1:0.9.10-1 [18.7 kB]
+    elasticnode1: Get:15 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libnss3 amd64 2:3.35-2ubuntu2.3 [1,136 kB]
+    elasticnode2: Get:21 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 x11-common all 1:7.7+19ubuntu7.1 [22.5 kB]
+    elasticnode3: Get:16 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2-data all 1.1.3-5ubuntu0.2 [36.5 kB]
+    elasticnode2: Get:22 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxtst6 amd64 2:1.2.3-1 [12.8 kB]
+    elasticnode2: Get:23 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openjdk-11-jre-headless amd64 11.0.4+11-1ubuntu2~18.04.3 [37.4 MB]
+    elasticnode3: Get:17 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2 amd64 1.1.3-5ubuntu0.2 [359 kB]
+    elasticnode1: Get:16 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2-data all 1.1.3-5ubuntu0.2 [36.5 kB]
+    elasticnode1: Get:17 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libasound2 amd64 1.1.3-5ubuntu0.2 [359 kB]
+    elasticnode3: Get:18 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libpcsclite1 amd64 1.8.23-1 [21.3 kB]
+    elasticnode3: Get:19 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxi6 amd64 2:1.7.9-1 [29.2 kB]
+    elasticnode1: Get:18 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libpcsclite1 amd64 1.8.23-1 [21.3 kB]
+    elasticnode3: Get:20 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxrender1 amd64 1:0.9.10-1 [18.7 kB]
+    elasticnode1: Get:19 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxi6 amd64 2:1.7.9-1 [29.2 kB]
+    elasticnode3: Get:21 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 x11-common all 1:7.7+19ubuntu7.1 [22.5 kB]
+    elasticnode1: Get:20 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxrender1 amd64 1:0.9.10-1 [18.7 kB]
+    elasticnode3: Get:22 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxtst6 amd64 2:1.2.3-1 [12.8 kB]
+    elasticnode3: Get:23 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openjdk-11-jre-headless amd64 11.0.4+11-1ubuntu2~18.04.3 [37.4 MB]
+    elasticnode2: Get:24 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ca-certificates-java all 20180516ubuntu1~18.04.1 [12.2 kB]
+    elasticnode1: Get:21 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 x11-common all 1:7.7+19ubuntu7.1 [22.5 kB]
+    elasticnode2: Get:25 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libonig4 amd64 6.7.0-1 [119 kB]
+    elasticnode1: Get:22 http://us.archive.ubuntu.com/ubuntu bionic/main amd64 libxtst6 amd64 2:1.2.3-1 [12.8 kB]
+    elasticnode1: Get:23 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 openjdk-11-jre-headless amd64 11.0.4+11-1ubuntu2~18.04.3 [37.4 MB]
+    elasticnode2: Get:26 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libjq1 amd64 1.5+dfsg-2 [111 kB]
+    elasticnode2: Get:27 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 jq amd64 1.5+dfsg-2 [45.6 kB]
+    elasticnode2: Get:28 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libssh2-1 amd64 1.8.0-1 [73.2 kB]
+    elasticnode3: Get:24 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ca-certificates-java all 20180516ubuntu1~18.04.1 [12.2 kB]
+    elasticnode2: Get:29 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
+    elasticnode3: Get:25 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libonig4 amd64 6.7.0-1 [119 kB]
+    elasticnode1: Get:24 http://us.archive.ubuntu.com/ubuntu bionic-updates/main amd64 ca-certificates-java all 20180516ubuntu1~18.04.1 [12.2 kB]
+    elasticnode3: Get:26 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libjq1 amd64 1.5+dfsg-2 [111 kB]
+    elasticnode1: Get:25 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libonig4 amd64 6.7.0-1 [119 kB]
+    elasticnode2: Get:30 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
+    elasticnode3: Get:27 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 jq amd64 1.5+dfsg-2 [45.6 kB]
+    elasticnode1: Get:26 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libjq1 amd64 1.5+dfsg-2 [111 kB]
+    elasticnode3: Get:28 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libssh2-1 amd64 1.8.0-1 [73.2 kB]
+    elasticnode2: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    elasticnode2: Fetched 43.0 MB in 20s (2,109 kB/s)
+    elasticnode2: Selecting previously unselected package libjpeg-turbo8:amd64.
+    elasticnode2: (Reading database ... 
+    elasticnode2: (Reading database ... 5%
+    elasticnode2: (Reading database ... 10%
+    elasticnode2: (Reading database ... 15%
+    elasticnode2: (Reading database ... 20%
+    elasticnode2: (Reading database ... 25%
+    elasticnode2: (Reading database ... 30%
+    elasticnode2: (Reading database ... 35%
+    elasticnode2: (Reading database ... 40%
+    elasticnode2: (Reading database ... 45%
+    elasticnode2: (Reading database ... 50%
+    elasticnode2: (Reading database ... 55%
+    elasticnode2: (Reading database ... 60%
+    elasticnode2: (Reading database ... 65%
+    elasticnode2: (Reading database ... 70%
+    elasticnode2: (Reading database ... 75%
+    elasticnode2: (Reading database ... 80%
+    elasticnode2: (Reading database ... 85%
+    elasticnode2: (Reading database ... 90%
+    elasticnode2: (Reading database ... 95%
+    elasticnode2: (Reading database ... 100%
+    elasticnode2: (Reading database ... 
+    elasticnode2: 105688 files and directories currently installed.)
+    elasticnode2: Preparing to unpack .../00-libjpeg-turbo8_1.5.2-0ubuntu5.18.04.1_amd64.deb ...
+    elasticnode1: Get:27 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 jq amd64 1.5+dfsg-2 [45.6 kB]
+    elasticnode2: Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
+    elasticnode2: Selecting previously unselected package apt-transport-https.
+    elasticnode2: Preparing to unpack .../01-apt-transport-https_1.6.12_all.deb ...
+    elasticnode2: Unpacking apt-transport-https (1.6.12) ...
+    elasticnode2: Selecting previously unselected package bats.
+    elasticnode2: Preparing to unpack .../02-bats_0.4.0-1.1_all.deb ...
+    elasticnode2: Unpacking bats (0.4.0-1.1) ...
+    elasticnode3: Get:29 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
+    elasticnode2: Selecting previously unselected package java-common.
+    elasticnode2: Preparing to unpack .../03-java-common_0.68ubuntu1~18.04.1_all.deb ...
+    elasticnode2: Unpacking java-common (0.68ubuntu1~18.04.1) ...
+    elasticnode2: Selecting previously unselected package libavahi-common-data:amd64.
+    elasticnode1: Get:28 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 libssh2-1 amd64 1.8.0-1 [73.2 kB]
+    elasticnode2: Preparing to unpack .../04-libavahi-common-data_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode2: Unpacking libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Selecting previously unselected package libavahi-common3:amd64.
+    elasticnode2: Preparing to unpack .../05-libavahi-common3_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode2: Unpacking libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Selecting previously unselected package libavahi-client3:amd64.
+    elasticnode2: Preparing to unpack .../06-libavahi-client3_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode2: Unpacking libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Selecting previously unselected package libcups2:amd64.
+    elasticnode2: Preparing to unpack .../07-libcups2_2.2.7-1ubuntu2.7_amd64.deb ...
+    elasticnode2: Unpacking libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    elasticnode1: Get:29 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc-data all 3:4.8.19-1 [1,238 kB]
+    elasticnode2: Selecting previously unselected package liblcms2-2:amd64.
+    elasticnode2: Preparing to unpack .../08-liblcms2-2_2.9-1ubuntu0.1_amd64.deb ...
+    elasticnode2: Unpacking liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    elasticnode2: Selecting previously unselected package libjpeg8:amd64.
+    elasticnode2: Preparing to unpack .../09-libjpeg8_8c-2ubuntu8_amd64.deb ...
+    elasticnode2: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+    elasticnode2: Selecting previously unselected package fonts-dejavu-core.
+    elasticnode2: Preparing to unpack .../10-fonts-dejavu-core_2.37-1_all.deb ...
+    elasticnode2: Unpacking fonts-dejavu-core (2.37-1) ...
+    elasticnode3: Get:30 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
+    elasticnode2: Selecting previously unselected package fontconfig-config.
+    elasticnode2: Preparing to unpack .../11-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
+    elasticnode2: Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
+    elasticnode2: Selecting previously unselected package libfontconfig1:amd64.
+    elasticnode2: Preparing to unpack .../12-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
+    elasticnode2: Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    elasticnode2: Selecting previously unselected package libnspr4:amd64.
+    elasticnode2: Preparing to unpack .../13-libnspr4_2%3a4.18-1ubuntu1_amd64.deb ...
+    elasticnode2: Unpacking libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    elasticnode1: Get:30 http://us.archive.ubuntu.com/ubuntu bionic/universe amd64 mc amd64 3:4.8.19-1 [474 kB]
+    elasticnode2: Selecting previously unselected package libnss3:amd64.
+    elasticnode2: Preparing to unpack .../14-libnss3_2%3a3.35-2ubuntu2.3_amd64.deb ...
+    elasticnode2: Unpacking libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    elasticnode3: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    elasticnode2: Selecting previously unselected package libasound2-data.
+    elasticnode2: Preparing to unpack .../15-libasound2-data_1.1.3-5ubuntu0.2_all.deb ...
+    elasticnode2: Unpacking libasound2-data (1.1.3-5ubuntu0.2) ...
+    elasticnode3: Fetched 43.0 MB in 20s (2,177 kB/s)
+    elasticnode3: Selecting previously unselected package libjpeg-turbo8:amd64.
+    elasticnode3: (Reading database ... 
+    elasticnode3: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    elasticnode3: (Reading database ... 60%
+    elasticnode3: (Reading database ... 65%
+    elasticnode3: (Reading database ... 70%
+    elasticnode3: (Reading database ... 75%
+    elasticnode3: (Reading database ... 80%
+    elasticnode3: (Reading database ... 85%
+    elasticnode3: (Reading database ... 90%
+    elasticnode3: (Reading database ... 95%
+    elasticnode3: (Reading database ... 100%(Reading database ... 105688 files and directories currently installed.)
+    elasticnode3: Preparing to unpack .../00-libjpeg-turbo8_1.5.2-0ubuntu5.18.04.1_amd64.deb ...
+    elasticnode3: Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
+    elasticnode2: Selecting previously unselected package libasound2:amd64.
+    elasticnode2: Preparing to unpack .../16-libasound2_1.1.3-5ubuntu0.2_amd64.deb ...
+    elasticnode2: Unpacking libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    elasticnode3: Selecting previously unselected package apt-transport-https.
+    elasticnode3: Preparing to unpack .../01-apt-transport-https_1.6.12_all.deb ...
+    elasticnode3: Unpacking apt-transport-https (1.6.12) ...
+    elasticnode3: Selecting previously unselected package bats.
+    elasticnode3: Preparing to unpack .../02-bats_0.4.0-1.1_all.deb ...
+    elasticnode3: Unpacking bats (0.4.0-1.1) ...
+    elasticnode2: Selecting previously unselected package libpcsclite1:amd64.
+    elasticnode2: Preparing to unpack .../17-libpcsclite1_1.8.23-1_amd64.deb ...
+    elasticnode2: Unpacking libpcsclite1:amd64 (1.8.23-1) ...
+    elasticnode3: Selecting previously unselected package java-common.
+    elasticnode3: Preparing to unpack .../03-java-common_0.68ubuntu1~18.04.1_all.deb ...
+    elasticnode2: Selecting previously unselected package libxi6:amd64.
+    elasticnode2: Preparing to unpack .../18-libxi6_2%3a1.7.9-1_amd64.deb ...
+    elasticnode3: Unpacking java-common (0.68ubuntu1~18.04.1) ...
+    elasticnode1: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    elasticnode2: Unpacking libxi6:amd64 (2:1.7.9-1) ...
+    elasticnode1: Fetched 43.0 MB in 20s (2,182 kB/s)
+    elasticnode3: Selecting previously unselected package libavahi-common-data:amd64.
+    elasticnode3: Preparing to unpack .../04-libavahi-common-data_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode1: Selecting previously unselected package libjpeg-turbo8:amd64.
+    elasticnode1: (Reading database ... 
+    elasticnode2: Selecting previously unselected package libxrender1:amd64.
+    elasticnode1: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    elasticnode2: Preparing to unpack .../19-libxrender1_1%3a0.9.10-1_amd64.deb ...
+    elasticnode3: Unpacking libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Unpacking libxrender1:amd64 (1:0.9.10-1) ...
+    elasticnode1: (Reading database ... 60%
+    elasticnode1: (Reading database ... 65%
+    elasticnode1: (Reading database ... 70%
+    elasticnode1: (Reading database ... 75%
+    elasticnode1: (Reading database ... 80%
+    elasticnode1: (Reading database ... 85%
+    elasticnode1: (Reading database ... 90%
+    elasticnode1: (Reading database ... 95%
+    elasticnode1: (Reading database ... 100%(Reading database ... 105688 files and directories currently installed.)
+    elasticnode1: Preparing to unpack .../00-libjpeg-turbo8_1.5.2-0ubuntu5.18.04.1_amd64.deb ...
+    elasticnode1: Unpacking libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
+    elasticnode3: Selecting previously unselected package libavahi-common3:amd64.
+    elasticnode2: Selecting previously unselected package x11-common.
+    elasticnode3: Preparing to unpack .../05-libavahi-common3_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode2: Preparing to unpack .../20-x11-common_1%3a7.7+19ubuntu7.1_all.deb ...
+    elasticnode3: Unpacking libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: dpkg-query: no packages found matching nux-tools
+    elasticnode1: Selecting previously unselected package apt-transport-https.
+    elasticnode1: Preparing to unpack .../01-apt-transport-https_1.6.12_all.deb ...
+    elasticnode2: Unpacking x11-common (1:7.7+19ubuntu7.1) ...
+    elasticnode1: Unpacking apt-transport-https (1.6.12) ...
+    elasticnode3: Selecting previously unselected package libavahi-client3:amd64.
+    elasticnode3: Preparing to unpack .../06-libavahi-client3_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode3: Unpacking libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode1: Selecting previously unselected package bats.
+    elasticnode1: Preparing to unpack .../02-bats_0.4.0-1.1_all.deb ...
+    elasticnode1: Unpacking bats (0.4.0-1.1) ...
+    elasticnode2: Selecting previously unselected package libxtst6:amd64.
+    elasticnode2: Preparing to unpack .../21-libxtst6_2%3a1.2.3-1_amd64.deb ...
+    elasticnode2: Unpacking libxtst6:amd64 (2:1.2.3-1) ...
+    elasticnode3: Selecting previously unselected package libcups2:amd64.
+    elasticnode3: Preparing to unpack .../07-libcups2_2.2.7-1ubuntu2.7_amd64.deb ...
+    elasticnode3: Unpacking libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    elasticnode1: Selecting previously unselected package java-common.
+    elasticnode1: Preparing to unpack .../03-java-common_0.68ubuntu1~18.04.1_all.deb ...
+    elasticnode1: Unpacking java-common (0.68ubuntu1~18.04.1) ...
+    elasticnode2: Selecting previously unselected package openjdk-11-jre-headless:amd64.
+    elasticnode2: Preparing to unpack .../22-openjdk-11-jre-headless_11.0.4+11-1ubuntu2~18.04.3_amd64.deb ...
+    elasticnode2: Unpacking openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    elasticnode3: Selecting previously unselected package liblcms2-2:amd64.
+    elasticnode1: Selecting previously unselected package libavahi-common-data:amd64.
+    elasticnode3: Preparing to unpack .../08-liblcms2-2_2.9-1ubuntu0.1_amd64.deb ...
+    elasticnode1: Preparing to unpack .../04-libavahi-common-data_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode3: Unpacking liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    elasticnode1: Unpacking libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode3: Selecting previously unselected package libjpeg8:amd64.
+    elasticnode3: Preparing to unpack .../09-libjpeg8_8c-2ubuntu8_amd64.deb ...
+    elasticnode1: Selecting previously unselected package libavahi-common3:amd64.
+    elasticnode1: Preparing to unpack .../05-libavahi-common3_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode3: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+    elasticnode1: Unpacking libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode3: Selecting previously unselected package fonts-dejavu-core.
+    elasticnode3: Preparing to unpack .../10-fonts-dejavu-core_2.37-1_all.deb ...
+    elasticnode3: Unpacking fonts-dejavu-core (2.37-1) ...
+    elasticnode1: Selecting previously unselected package libavahi-client3:amd64.
+    elasticnode1: Preparing to unpack .../06-libavahi-client3_0.7-3.1ubuntu1.2_amd64.deb ...
+    elasticnode1: Unpacking libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode1: Selecting previously unselected package libcups2:amd64.
+    elasticnode1: Preparing to unpack .../07-libcups2_2.2.7-1ubuntu2.7_amd64.deb ...
+    elasticnode1: Unpacking libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    elasticnode3: Selecting previously unselected package fontconfig-config.
+    elasticnode3: Preparing to unpack .../11-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
+    elasticnode3: Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
+    elasticnode1: Selecting previously unselected package liblcms2-2:amd64.
+    elasticnode1: Preparing to unpack .../08-liblcms2-2_2.9-1ubuntu0.1_amd64.deb ...
+    elasticnode1: Unpacking liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    elasticnode3: Selecting previously unselected package libfontconfig1:amd64.
+    elasticnode3: Preparing to unpack .../12-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
+    elasticnode3: Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    elasticnode1: Selecting previously unselected package libjpeg8:amd64.
+    elasticnode1: Preparing to unpack .../09-libjpeg8_8c-2ubuntu8_amd64.deb ...
+    elasticnode1: Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+    elasticnode3: Selecting previously unselected package libnspr4:amd64.
+    elasticnode1: Selecting previously unselected package fonts-dejavu-core.
+    elasticnode3: Preparing to unpack .../13-libnspr4_2%3a4.18-1ubuntu1_amd64.deb ...
+    elasticnode1: Preparing to unpack .../10-fonts-dejavu-core_2.37-1_all.deb ...
+    elasticnode3: Unpacking libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    elasticnode1: Unpacking fonts-dejavu-core (2.37-1) ...
+    elasticnode3: Selecting previously unselected package libnss3:amd64.
+    elasticnode3: Preparing to unpack .../14-libnss3_2%3a3.35-2ubuntu2.3_amd64.deb ...
+    elasticnode3: Unpacking libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    elasticnode1: Selecting previously unselected package fontconfig-config.
+    elasticnode1: Preparing to unpack .../11-fontconfig-config_2.12.6-0ubuntu2_all.deb ...
+    elasticnode1: Unpacking fontconfig-config (2.12.6-0ubuntu2) ...
+    elasticnode1: Selecting previously unselected package libfontconfig1:amd64.
+    elasticnode1: Preparing to unpack .../12-libfontconfig1_2.12.6-0ubuntu2_amd64.deb ...
+    elasticnode1: Unpacking libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    elasticnode3: Selecting previously unselected package libasound2-data.
+    elasticnode3: Preparing to unpack .../15-libasound2-data_1.1.3-5ubuntu0.2_all.deb ...
+    elasticnode3: Unpacking libasound2-data (1.1.3-5ubuntu0.2) ...
+    elasticnode1: Selecting previously unselected package libnspr4:amd64.
+    elasticnode1: Preparing to unpack .../13-libnspr4_2%3a4.18-1ubuntu1_amd64.deb ...
+    elasticnode1: Unpacking libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    elasticnode3: Selecting previously unselected package libasound2:amd64.
+    elasticnode3: Preparing to unpack .../16-libasound2_1.1.3-5ubuntu0.2_amd64.deb ...
+    elasticnode3: Unpacking libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    elasticnode1: Selecting previously unselected package libnss3:amd64.
+    elasticnode1: Preparing to unpack .../14-libnss3_2%3a3.35-2ubuntu2.3_amd64.deb ...
+    elasticnode1: Unpacking libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    elasticnode3: Selecting previously unselected package libpcsclite1:amd64.
+    elasticnode3: Preparing to unpack .../17-libpcsclite1_1.8.23-1_amd64.deb ...
+    elasticnode3: Unpacking libpcsclite1:amd64 (1.8.23-1) ...
+    elasticnode1: Selecting previously unselected package libasound2-data.
+    elasticnode3: Selecting previously unselected package libxi6:amd64.
+    elasticnode1: Preparing to unpack .../15-libasound2-data_1.1.3-5ubuntu0.2_all.deb ...
+    elasticnode3: Preparing to unpack .../18-libxi6_2%3a1.7.9-1_amd64.deb ...
+    elasticnode1: Unpacking libasound2-data (1.1.3-5ubuntu0.2) ...
+    elasticnode3: Unpacking libxi6:amd64 (2:1.7.9-1) ...
+    elasticnode3: Selecting previously unselected package libxrender1:amd64.
+    elasticnode3: Preparing to unpack .../19-libxrender1_1%3a0.9.10-1_amd64.deb ...
+    elasticnode3: Unpacking libxrender1:amd64 (1:0.9.10-1) ...
+    elasticnode1: Selecting previously unselected package libasound2:amd64.
+    elasticnode1: Preparing to unpack .../16-libasound2_1.1.3-5ubuntu0.2_amd64.deb ...
+    elasticnode1: Unpacking libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    elasticnode3: Selecting previously unselected package x11-common.
+    elasticnode3: Preparing to unpack .../20-x11-common_1%3a7.7+19ubuntu7.1_all.deb ...
+    elasticnode3: dpkg-query: no packages found matching nux-tools
+    elasticnode3: Unpacking x11-common (1:7.7+19ubuntu7.1) ...
+    elasticnode1: Selecting previously unselected package libpcsclite1:amd64.
+    elasticnode1: Preparing to unpack .../17-libpcsclite1_1.8.23-1_amd64.deb ...
+    elasticnode1: Unpacking libpcsclite1:amd64 (1.8.23-1) ...
+    elasticnode3: Selecting previously unselected package libxtst6:amd64.
+    elasticnode3: Preparing to unpack .../21-libxtst6_2%3a1.2.3-1_amd64.deb ...
+    elasticnode3: Unpacking libxtst6:amd64 (2:1.2.3-1) ...
+    elasticnode1: Selecting previously unselected package libxi6:amd64.
+    elasticnode1: Preparing to unpack .../18-libxi6_2%3a1.7.9-1_amd64.deb ...
+    elasticnode1: Unpacking libxi6:amd64 (2:1.7.9-1) ...
+    elasticnode3: Selecting previously unselected package openjdk-11-jre-headless:amd64.
+    elasticnode3: Preparing to unpack .../22-openjdk-11-jre-headless_11.0.4+11-1ubuntu2~18.04.3_amd64.deb ...
+    elasticnode3: Unpacking openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    elasticnode1: Selecting previously unselected package libxrender1:amd64.
+    elasticnode1: Preparing to unpack .../19-libxrender1_1%3a0.9.10-1_amd64.deb ...
+    elasticnode1: Unpacking libxrender1:amd64 (1:0.9.10-1) ...
+    elasticnode1: Selecting previously unselected package x11-common.
+    elasticnode1: Preparing to unpack .../20-x11-common_1%3a7.7+19ubuntu7.1_all.deb ...
+    elasticnode1: dpkg-query: no packages found matching nux-tools
+    elasticnode1: Unpacking x11-common (1:7.7+19ubuntu7.1) ...
+    elasticnode1: Selecting previously unselected package libxtst6:amd64.
+    elasticnode1: Preparing to unpack .../21-libxtst6_2%3a1.2.3-1_amd64.deb ...
+    elasticnode1: Unpacking libxtst6:amd64 (2:1.2.3-1) ...
+    elasticnode1: Selecting previously unselected package openjdk-11-jre-headless:amd64.
+    elasticnode1: Preparing to unpack .../22-openjdk-11-jre-headless_11.0.4+11-1ubuntu2~18.04.3_amd64.deb ...
+    elasticnode1: Unpacking openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    elasticnode2: Selecting previously unselected package ca-certificates-java.
+    elasticnode2: Preparing to unpack .../23-ca-certificates-java_20180516ubuntu1~18.04.1_all.deb ...
+    elasticnode2: Unpacking ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    elasticnode2: Selecting previously unselected package libonig4:amd64.
+    elasticnode2: Preparing to unpack .../24-libonig4_6.7.0-1_amd64.deb ...
+    elasticnode2: Unpacking libonig4:amd64 (6.7.0-1) ...
+    elasticnode2: Selecting previously unselected package libjq1:amd64.
+    elasticnode2: Preparing to unpack .../25-libjq1_1.5+dfsg-2_amd64.deb ...
+    elasticnode2: Unpacking libjq1:amd64 (1.5+dfsg-2) ...
+    elasticnode2: Selecting previously unselected package jq.
+    elasticnode2: Preparing to unpack .../26-jq_1.5+dfsg-2_amd64.deb ...
+    elasticnode2: Unpacking jq (1.5+dfsg-2) ...
+    elasticnode2: Selecting previously unselected package libssh2-1:amd64.
+    elasticnode2: Preparing to unpack .../27-libssh2-1_1.8.0-1_amd64.deb ...
+    elasticnode2: Unpacking libssh2-1:amd64 (1.8.0-1) ...
+    elasticnode2: Selecting previously unselected package mc-data.
+    elasticnode2: Preparing to unpack .../28-mc-data_3%3a4.8.19-1_all.deb ...
+    elasticnode2: Unpacking mc-data (3:4.8.19-1) ...
+    elasticnode2: Selecting previously unselected package mc.
+    elasticnode2: Preparing to unpack .../29-mc_3%3a4.8.19-1_amd64.deb ...
+    elasticnode2: Unpacking mc (3:4.8.19-1) ...
+    elasticnode2: Setting up bats (0.4.0-1.1) ...
+    elasticnode2: Setting up libxi6:amd64 (2:1.7.9-1) ...
+    elasticnode2: Setting up apt-transport-https (1.6.12) ...
+    elasticnode2: Setting up liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    elasticnode2: Setting up libpcsclite1:amd64 (1.8.23-1) ...
+    elasticnode2: Setting up fonts-dejavu-core (2.37-1) ...
+    elasticnode2: Setting up libasound2-data (1.1.3-5ubuntu0.2) ...
+    elasticnode2: Setting up libonig4:amd64 (6.7.0-1) ...
+    elasticnode2: Setting up mc-data (3:4.8.19-1) ...
+    elasticnode2: Setting up java-common (0.68ubuntu1~18.04.1) ...
+    elasticnode2: Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
+    elasticnode2: Setting up libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    elasticnode2: Setting up libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    elasticnode2: Setting up libjq1:amd64 (1.5+dfsg-2) ...
+    elasticnode2: Setting up libssh2-1:amd64 (1.8.0-1) ...
+    elasticnode3: Selecting previously unselected package ca-certificates-java.
+    elasticnode3: Preparing to unpack .../23-ca-certificates-java_20180516ubuntu1~18.04.1_all.deb ...
+    elasticnode2: Setting up libxrender1:amd64 (1:0.9.10-1) ...
+    elasticnode3: Unpacking ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    elasticnode2: Setting up mc (3:4.8.19-1) ...
+    elasticnode3: Selecting previously unselected package libonig4:amd64.
+    elasticnode3: Preparing to unpack .../24-libonig4_6.7.0-1_amd64.deb ...
+    elasticnode3: Unpacking libonig4:amd64 (6.7.0-1) ...
+    elasticnode2: Setting up x11-common (1:7.7+19ubuntu7.1) ...
+    elasticnode3: Selecting previously unselected package libjq1:amd64.
+    elasticnode3: Preparing to unpack .../25-libjq1_1.5+dfsg-2_amd64.deb ...
+    elasticnode3: Unpacking libjq1:amd64 (1.5+dfsg-2) ...
+    elasticnode3: Selecting previously unselected package jq.
+    elasticnode3: Preparing to unpack .../26-jq_1.5+dfsg-2_amd64.deb ...
+    elasticnode3: Unpacking jq (1.5+dfsg-2) ...
+    elasticnode1: Selecting previously unselected package ca-certificates-java.
+    elasticnode1: Preparing to unpack .../23-ca-certificates-java_20180516ubuntu1~18.04.1_all.deb ...
+    elasticnode1: Unpacking ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    elasticnode3: Selecting previously unselected package libssh2-1:amd64.
+    elasticnode3: Preparing to unpack .../27-libssh2-1_1.8.0-1_amd64.deb ...
+    elasticnode3: Unpacking libssh2-1:amd64 (1.8.0-1) ...
+    elasticnode1: Selecting previously unselected package libonig4:amd64.
+    elasticnode1: Preparing to unpack .../24-libonig4_6.7.0-1_amd64.deb ...
+    elasticnode1: Unpacking libonig4:amd64 (6.7.0-1) ...
+    elasticnode3: Selecting previously unselected package mc-data.
+    elasticnode3: Preparing to unpack .../28-mc-data_3%3a4.8.19-1_all.deb ...
+    elasticnode2: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+    elasticnode3: Unpacking mc-data (3:4.8.19-1) ...
+    elasticnode1: Selecting previously unselected package libjq1:amd64.
+    elasticnode1: Preparing to unpack .../25-libjq1_1.5+dfsg-2_amd64.deb ...
+    elasticnode1: Unpacking libjq1:amd64 (1.5+dfsg-2) ...
+    elasticnode1: Selecting previously unselected package jq.
+    elasticnode1: Preparing to unpack .../26-jq_1.5+dfsg-2_amd64.deb ...
+    elasticnode1: Unpacking jq (1.5+dfsg-2) ...
+    elasticnode1: Selecting previously unselected package libssh2-1:amd64.
+    elasticnode1: Preparing to unpack .../27-libssh2-1_1.8.0-1_amd64.deb ...
+    elasticnode1: Unpacking libssh2-1:amd64 (1.8.0-1) ...
+    elasticnode2: Setting up libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+    elasticnode3: Selecting previously unselected package mc.
+    elasticnode3: Preparing to unpack .../29-mc_3%3a4.8.19-1_amd64.deb ...
+    elasticnode2: Setting up jq (1.5+dfsg-2) ...
+    elasticnode1: Selecting previously unselected package mc-data.
+    elasticnode1: Preparing to unpack .../28-mc-data_3%3a4.8.19-1_all.deb ...
+    elasticnode2: Setting up fontconfig-config (2.12.6-0ubuntu2) ...
+    elasticnode3: Unpacking mc (3:4.8.19-1) ...
+    elasticnode1: Unpacking mc-data (3:4.8.19-1) ...
+    elasticnode3: Setting up bats (0.4.0-1.1) ...
+    elasticnode3: Setting up libxi6:amd64 (2:1.7.9-1) ...
+    elasticnode3: Setting up apt-transport-https (1.6.12) ...
+    elasticnode3: Setting up liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    elasticnode3: Setting up libpcsclite1:amd64 (1.8.23-1) ...
+    elasticnode1: Selecting previously unselected package mc.
+    elasticnode3: Setting up fonts-dejavu-core (2.37-1) ...
+    elasticnode1: Preparing to unpack .../29-mc_3%3a4.8.19-1_amd64.deb ...
+    elasticnode2: Setting up libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    elasticnode1: Unpacking mc (3:4.8.19-1) ...
+    elasticnode2: Setting up libxtst6:amd64 (2:1.2.3-1) ...
+    elasticnode2: Setting up libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    elasticnode3: Setting up libasound2-data (1.1.3-5ubuntu0.2) ...
+    elasticnode2: Setting up libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode3: Setting up libonig4:amd64 (6.7.0-1) ...
+    elasticnode2: Setting up libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    elasticnode2: Setting up openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    elasticnode3: Setting up mc-data (3:4.8.19-1) ...
+    elasticnode3: Setting up java-common (0.68ubuntu1~18.04.1) ...
+    elasticnode1: Setting up bats (0.4.0-1.1) ...
+    elasticnode3: Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
+    elasticnode1: Setting up libxi6:amd64 (2:1.7.9-1) ...
+    elasticnode3: Setting up libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    elasticnode1: Setting up apt-transport-https (1.6.12) ...
+    elasticnode3: Setting up libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    elasticnode1: Setting up liblcms2-2:amd64 (2.9-1ubuntu0.1) ...
+    elasticnode3: Setting up libjq1:amd64 (1.5+dfsg-2) ...
+    elasticnode1: Setting up libpcsclite1:amd64 (1.8.23-1) ...
+    elasticnode3: Setting up libssh2-1:amd64 (1.8.0-1) ...
+    elasticnode1: Setting up fonts-dejavu-core (2.37-1) ...
+    elasticnode3: Setting up libxrender1:amd64 (1:0.9.10-1) ...
+    elasticnode3: Setting up mc (3:4.8.19-1) ...
+    elasticnode2: update-alternatives: 
+    elasticnode2: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+    elasticnode2: update-alternatives: 
+    elasticnode2: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+    elasticnode2: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+    elasticnode2: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+    elasticnode2: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+    elasticnode2: update-alternatives: 
+    elasticnode2: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+    elasticnode2: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+    elasticnode2: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+    elasticnode1: Setting up libasound2-data (1.1.3-5ubuntu0.2) ...
+    elasticnode1: Setting up libonig4:amd64 (6.7.0-1) ...
+    elasticnode1: Setting up mc-data (3:4.8.19-1) ...
+    elasticnode1: Setting up java-common (0.68ubuntu1~18.04.1) ...
+    elasticnode3: Setting up x11-common (1:7.7+19ubuntu7.1) ...
+    elasticnode1: Setting up libjpeg-turbo8:amd64 (1.5.2-0ubuntu5.18.04.1) ...
+    elasticnode1: Setting up libnspr4:amd64 (2:4.18-1ubuntu1) ...
+    elasticnode1: Setting up libasound2:amd64 (1.1.3-5ubuntu0.2) ...
+    elasticnode1: Setting up libjq1:amd64 (1.5+dfsg-2) ...
+    elasticnode1: Setting up libssh2-1:amd64 (1.8.0-1) ...
+    elasticnode1: Setting up libxrender1:amd64 (1:0.9.10-1) ...
+    elasticnode1: Setting up mc (3:4.8.19-1) ...
+    elasticnode3: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+    elasticnode1: Setting up x11-common (1:7.7+19ubuntu7.1) ...
+    elasticnode2: Setting up ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    elasticnode2: head: cannot open '/etc/ssl/certs/java/cacerts' for reading
+    elasticnode2: : No such file or directory
+    elasticnode3: Setting up libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode3: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+    elasticnode3: Setting up jq (1.5+dfsg-2) ...
+    elasticnode3: Setting up fontconfig-config (2.12.6-0ubuntu2) ...
+    elasticnode1: update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+    elasticnode2: Adding debian:QuoVadis_Root_CA_2_G3.pem
+    elasticnode2: Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+    elasticnode2: Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+    elasticnode2: Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+    elasticnode2: Adding debian:Taiwan_GRCA.pem
+    elasticnode2: Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+    elasticnode2: Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+    elasticnode2: Adding debian:SwissSign_Gold_CA_-_G2.pem
+    elasticnode2: Adding debian:CFCA_EV_ROOT.pem
+    elasticnode2: Adding debian:Security_Communication_Root_CA.pem
+    elasticnode2: Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
+    elasticnode2: Adding debian:COMODO_Certification_Authority.pem
+    elasticnode2: Adding debian:COMODO_RSA_Certification_Authority.pem
+    elasticnode2: Adding debian:CA_Disig_Root_R2.pem
+    elasticnode2: Adding debian:COMODO_ECC_Certification_Authority.pem
+    elasticnode2: Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+    elasticnode2: Adding debian:Certigna.pem
+    elasticnode2: Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
+    elasticnode2: Adding debian:Comodo_AAA_Services_root.pem
+    elasticnode2: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
+    elasticnode2: Adding debian:Amazon_Root_CA_2.pem
+    elasticnode2: Adding debian:thawte_Primary_Root_CA_-_G2.pem
+    elasticnode2: Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+    elasticnode2: Adding debian:Certplus_Root_CA_G2.pem
+    elasticnode2: Adding debian:SwissSign_Silver_CA_-_G2.pem
+    elasticnode2: Adding debian:Certplus_Class_2_Primary_CA.pem
+    elasticnode2: Adding debian:Entrust_Root_Certification_Authority.pem
+    elasticnode2: Adding debian:EE_Certification_Centre_Root_CA.pem
+    elasticnode2: Adding debian:DigiCert_Assured_ID_Root_G2.pem
+    elasticnode2: Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+    elasticnode2: Adding debian:AddTrust_External_Root.pem
+    elasticnode2: Adding debian:AffirmTrust_Premium_ECC.pem
+    elasticnode2: Adding debian:Amazon_Root_CA_1.pem
+    elasticnode2: Adding debian:TrustCor_ECA-1.pem
+    elasticnode2: Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+    elasticnode2: Adding debian:OpenTrust_Root_CA_G2.pem
+    elasticnode2: Adding debian:GlobalSign_Root_CA_-_R3.pem
+    elasticnode2: Adding debian:USERTrust_RSA_Certification_Authority.pem
+    elasticnode2: Adding debian:DigiCert_Global_Root_G3.pem
+    elasticnode2: Adding debian:Cybertrust_Global_Root.pem
+    elasticnode2: Adding debian:Hongkong_Post_Root_CA_1.pem
+    elasticnode2: Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
+    elasticnode2: Adding debian:SZAFIR_ROOT_CA2.pem
+    elasticnode2: Adding debian:TrustCor_RootCert_CA-1.pem
+    elasticnode2: Adding debian:Secure_Global_CA.pem
+    elasticnode2: Adding debian:TWCA_Root_Certification_Authority.pem
+    elasticnode2: Adding debian:DigiCert_Global_Root_G2.pem
+    elasticnode2: Adding debian:QuoVadis_Root_CA_2.pem
+    elasticnode2: Adding debian:Deutsche_Telekom_Root_CA_2.pem
+    elasticnode1: Setting up libavahi-common-data:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+    elasticnode2: Adding debian:AffirmTrust_Networking.pem
+    elasticnode2: Adding debian:GlobalSign_Root_CA.pem
+    elasticnode2: Adding debian:GeoTrust_Universal_CA.pem
+    elasticnode2: Adding debian:USERTrust_ECC_Certification_Authority.pem
+    elasticnode2: Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+    elasticnode2: Adding debian:Certum_Trusted_Network_CA_2.pem
+    elasticnode2: Adding debian:TeliaSonera_Root_CA_v1.pem
+    elasticnode2: Adding debian:TWCA_Global_Root_CA.pem
+    elasticnode1: Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+    elasticnode2: Adding debian:Baltimore_CyberTrust_Root.pem
+    elasticnode2: Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+    elasticnode2: Adding debian:Buypass_Class_2_Root_CA.pem
+    elasticnode2: Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+    elasticnode2: Adding debian:DigiCert_Assured_ID_Root_CA.pem
+    elasticnode2: Adding debian:OpenTrust_Root_CA_G1.pem
+    elasticnode2: Adding debian:Security_Communication_RootCA2.pem
+    elasticnode2: Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+    elasticnode2: Adding debian:Atos_TrustedRoot_2011.pem
+    elasticnode1: Setting up jq (1.5+dfsg-2) ...
+    elasticnode2: Adding debian:Amazon_Root_CA_3.pem
+    elasticnode2: Adding debian:XRamp_Global_CA_Root.pem
+    elasticnode2: Adding debian:Visa_eCommerce_Root.pem
+    elasticnode2: Adding debian:Amazon_Root_CA_4.pem
+    elasticnode2: Adding debian:Starfield_Class_2_CA.pem
+    elasticnode2: Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+    elasticnode1: Setting up fontconfig-config (2.12.6-0ubuntu2) ...
+    elasticnode2: Adding debian:Certum_Trusted_Network_CA.pem
+    elasticnode2: Adding debian:thawte_Primary_Root_CA.pem
+    elasticnode2: Adding debian:ACCVRAIZ1.pem
+    elasticnode2: Adding debian:ePKI_Root_Certification_Authority.pem
+    elasticnode2: Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+    elasticnode2: Adding debian:DigiCert_Global_Root_CA.pem
+    elasticnode2: Adding debian:QuoVadis_Root_CA_3_G3.pem
+    elasticnode3: Setting up libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    elasticnode2: Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
+    elasticnode2: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
+    elasticnode2: Adding debian:thawte_Primary_Root_CA_-_G3.pem
+    elasticnode2: Adding debian:Chambers_of_Commerce_Root_-_2008.pem
+    elasticnode3: Setting up libxtst6:amd64 (2:1.2.3-1) ...
+    elasticnode2: Adding debian:ISRG_Root_X1.pem
+    elasticnode2: Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+    elasticnode2: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem
+    elasticnode2: Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+    elasticnode2: Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+    elasticnode2: Adding debian:SecureTrust_CA.pem
+    elasticnode2: Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem
+    elasticnode3: Setting up libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Adding debian:QuoVadis_Root_CA_1_G3.pem
+    elasticnode2: Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+    elasticnode2: Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+    elasticnode2: Adding debian:certSIGN_ROOT_CA.pem
+    elasticnode2: Adding debian:GeoTrust_Universal_CA_2.pem
+    elasticnode2: Adding debian:TrustCor_RootCert_CA-2.pem
+    elasticnode2: Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem
+    elasticnode3: Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    elasticnode2: Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+    elasticnode2: Adding debian:Actalis_Authentication_Root_CA.pem
+    elasticnode2: Adding debian:SecureSign_RootCA11.pem
+    elasticnode2: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+    elasticnode2: Adding debian:DigiCert_Trusted_Root_G4.pem
+    elasticnode3: Setting up libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode2: Adding debian:GlobalSign_Root_CA_-_R2.pem
+    elasticnode2: Adding debian:LuxTrust_Global_Root_2.pem
+    elasticnode2: Adding debian:AffirmTrust_Commercial.pem
+    elasticnode2: Adding debian:Global_Chambersign_Root_-_2008.pem
+    elasticnode2: Adding debian:GeoTrust_Global_CA.pem
+    elasticnode2: Adding debian:DigiCert_Assured_ID_Root_G3.pem
+    elasticnode2: Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+    elasticnode3: Setting up libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    elasticnode2: Adding debian:Network_Solutions_Certificate_Authority.pem
+    elasticnode2: Adding debian:OpenTrust_Root_CA_G3.pem
+    elasticnode2: Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+    elasticnode2: Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem
+    elasticnode2: Adding debian:Certplus_Root_CA_G1.pem
+    elasticnode2: Adding debian:Trustis_FPS_Root_CA.pem
+    elasticnode2: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
+    elasticnode2: Adding debian:EC-ACC.pem
+    elasticnode3: Setting up openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    elasticnode2: Adding debian:AC_RAIZ_FNMT-RCM.pem
+    elasticnode2: Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+    elasticnode2: Adding debian:DST_Root_CA_X3.pem
+    elasticnode2: Adding debian:QuoVadis_Root_CA_3.pem
+    elasticnode2: Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+    elasticnode2: Adding debian:Sonera_Class_2_Root_CA.pem
+    elasticnode2: Adding debian:AffirmTrust_Premium.pem
+    elasticnode2: Adding debian:E-Tugra_Certification_Authority.pem
+    elasticnode2: Adding debian:GeoTrust_Primary_Certification_Authority.pem
+    elasticnode2: Adding debian:QuoVadis_Root_CA.pem
+    elasticnode2: Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+    elasticnode2: Adding debian:Certinomis_-_Root_CA.pem
+    elasticnode2: Adding debian:Buypass_Class_3_Root_CA.pem
+    elasticnode2: Adding debian:Izenpe.com.pem
+    elasticnode2: Adding debian:Go_Daddy_Class_2_CA.pem
+    elasticnode2: done.
+    elasticnode2: Processing triggers for mime-support (3.60ubuntu1) ...
+    elasticnode2: Processing triggers for ureadahead (0.100.0-21) ...
+    elasticnode2: Processing triggers for libc-bin (2.27-3ubuntu1) ...
+    elasticnode1: Setting up libnss3:amd64 (2:3.35-2ubuntu2.3) ...
+    elasticnode2: Processing triggers for systemd (237-3ubuntu10.31) ...
+    elasticnode1: Setting up libxtst6:amd64 (2:1.2.3-1) ...
+    elasticnode3: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+    elasticnode1: Setting up libavahi-common3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode3: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+    elasticnode3: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+    elasticnode1: Setting up libfontconfig1:amd64 (2.12.6-0ubuntu2) ...
+    elasticnode3: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+    elasticnode3: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+    elasticnode3: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+    elasticnode3: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+    elasticnode1: Setting up libavahi-client3:amd64 (0.7-3.1ubuntu1.2) ...
+    elasticnode3: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+    elasticnode1: Setting up libcups2:amd64 (2.2.7-1ubuntu2.7) ...
+    elasticnode2: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+    elasticnode1: Setting up openjdk-11-jre-headless:amd64 (11.0.4+11-1ubuntu2~18.04.3) ...
+    elasticnode1: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+    elasticnode1: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+    elasticnode1: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+    elasticnode1: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+    elasticnode1: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+    elasticnode1: update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+    elasticnode1: update-alternatives: 
+    elasticnode1: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+    elasticnode1: update-alternatives: 
+    elasticnode1: using /usr/lib/jvm/java-11-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+    elasticnode3: Setting up ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    elasticnode3: head: cannot open '/etc/ssl/certs/java/cacerts' for reading: No such file or directory
+    elasticnode3: Adding debian:QuoVadis_Root_CA_2_G3.pem
+    elasticnode3: Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+    elasticnode3: Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+    elasticnode3: Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+    elasticnode3: Adding debian:Taiwan_GRCA.pem
+    elasticnode3: Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+    elasticnode3: Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+    elasticnode3: Adding debian:SwissSign_Gold_CA_-_G2.pem
+    elasticnode3: Adding debian:CFCA_EV_ROOT.pem
+    elasticnode3: Adding debian:Security_Communication_Root_CA.pem
+    elasticnode3: Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
+    elasticnode3: Adding debian:COMODO_Certification_Authority.pem
+    elasticnode3: Adding debian:COMODO_RSA_Certification_Authority.pem
+    elasticnode3: Adding debian:CA_Disig_Root_R2.pem
+    elasticnode3: Adding debian:COMODO_ECC_Certification_Authority.pem
+    elasticnode3: Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+    elasticnode3: Adding debian:Certigna.pem
+    elasticnode3: Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
+    elasticnode3: Adding debian:Comodo_AAA_Services_root.pem
+    elasticnode3: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
+    elasticnode3: Adding debian:Amazon_Root_CA_2.pem
+    elasticnode3: Adding debian:thawte_Primary_Root_CA_-_G2.pem
+    elasticnode1: Setting up ca-certificates-java (20180516ubuntu1~18.04.1) ...
+    elasticnode3: Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+    elasticnode3: Adding debian:Certplus_Root_CA_G2.pem
+    elasticnode3: Adding debian:SwissSign_Silver_CA_-_G2.pem
+    elasticnode3: Adding debian:Certplus_Class_2_Primary_CA.pem
+    elasticnode3: Adding debian:Entrust_Root_Certification_Authority.pem
+    elasticnode3: Adding debian:EE_Certification_Centre_Root_CA.pem
+    elasticnode3: Adding debian:DigiCert_Assured_ID_Root_G2.pem
+    elasticnode3: Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+    elasticnode3: Adding debian:AddTrust_External_Root.pem
+    elasticnode3: Adding debian:AffirmTrust_Premium_ECC.pem
+    elasticnode3: Adding debian:Amazon_Root_CA_1.pem
+    elasticnode3: Adding debian:TrustCor_ECA-1.pem
+    elasticnode3: Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+    elasticnode3: Adding debian:OpenTrust_Root_CA_G2.pem
+    elasticnode3: Adding debian:GlobalSign_Root_CA_-_R3.pem
+    elasticnode3: Adding debian:USERTrust_RSA_Certification_Authority.pem
+    elasticnode3: Adding debian:DigiCert_Global_Root_G3.pem
+    elasticnode3: Adding debian:Cybertrust_Global_Root.pem
+    elasticnode1: head: cannot open '/etc/ssl/certs/java/cacerts' for reading: No such file or directory
+    elasticnode3: Adding debian:Hongkong_Post_Root_CA_1.pem
+    elasticnode3: Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
+    elasticnode3: Adding debian:SZAFIR_ROOT_CA2.pem
+    elasticnode3: Adding debian:TrustCor_RootCert_CA-1.pem
+    elasticnode3: Adding debian:Secure_Global_CA.pem
+    elasticnode3: Adding debian:TWCA_Root_Certification_Authority.pem
+    elasticnode3: Adding debian:DigiCert_Global_Root_G2.pem
+    elasticnode3: Adding debian:QuoVadis_Root_CA_2.pem
+    elasticnode3: Adding debian:Deutsche_Telekom_Root_CA_2.pem
+    elasticnode3: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+    elasticnode3: Adding debian:AffirmTrust_Networking.pem
+    elasticnode3: Adding debian:GlobalSign_Root_CA.pem
+    elasticnode3: Adding debian:GeoTrust_Universal_CA.pem
+    elasticnode3: Adding debian:USERTrust_ECC_Certification_Authority.pem
+    elasticnode3: Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+    elasticnode3: Adding debian:Certum_Trusted_Network_CA_2.pem
+    elasticnode3: Adding debian:TeliaSonera_Root_CA_v1.pem
+    elasticnode3: Adding debian:TWCA_Global_Root_CA.pem
+    elasticnode3: Adding debian:Baltimore_CyberTrust_Root.pem
+    elasticnode3: Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+    elasticnode3: Adding debian:Buypass_Class_2_Root_CA.pem
+    elasticnode3: Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+    elasticnode3: Adding debian:DigiCert_Assured_ID_Root_CA.pem
+    elasticnode3: Adding debian:OpenTrust_Root_CA_G1.pem
+    elasticnode3: Adding debian:Security_Communication_RootCA2.pem
+    elasticnode3: Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+    elasticnode3: Adding debian:Atos_TrustedRoot_2011.pem
+    elasticnode3: Adding debian:Amazon_Root_CA_3.pem
+    elasticnode3: Adding debian:XRamp_Global_CA_Root.pem
+    elasticnode3: Adding debian:Visa_eCommerce_Root.pem
+    elasticnode3: Adding debian:Amazon_Root_CA_4.pem
+    elasticnode3: Adding debian:Starfield_Class_2_CA.pem
+    elasticnode3: Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+    elasticnode3: Adding debian:Certum_Trusted_Network_CA.pem
+    elasticnode3: Adding debian:thawte_Primary_Root_CA.pem
+    elasticnode3: Adding debian:ACCVRAIZ1.pem
+    elasticnode3: Adding debian:ePKI_Root_Certification_Authority.pem
+    elasticnode3: Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+    elasticnode3: Adding debian:DigiCert_Global_Root_CA.pem
+    elasticnode3: Adding debian:QuoVadis_Root_CA_3_G3.pem
+    elasticnode3: Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
+    elasticnode3: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
+    elasticnode3: Adding debian:thawte_Primary_Root_CA_-_G3.pem
+    elasticnode3: Adding debian:Chambers_of_Commerce_Root_-_2008.pem
+    elasticnode3: Adding debian:ISRG_Root_X1.pem
+    elasticnode3: Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+    elasticnode3: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem
+    elasticnode3: Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+    elasticnode3: Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+    elasticnode3: Adding debian:SecureTrust_CA.pem
+    elasticnode3: Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem
+    elasticnode3: Adding debian:QuoVadis_Root_CA_1_G3.pem
+    elasticnode3: Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+    elasticnode3: Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+    elasticnode3: Adding debian:certSIGN_ROOT_CA.pem
+    elasticnode3: Adding debian:GeoTrust_Universal_CA_2.pem
+    elasticnode3: Adding debian:TrustCor_RootCert_CA-2.pem
+    elasticnode3: Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem
+    elasticnode3: Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+    elasticnode3: Adding debian:Actalis_Authentication_Root_CA.pem
+    elasticnode3: Adding debian:SecureSign_RootCA11.pem
+    elasticnode3: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+    elasticnode3: Adding debian:DigiCert_Trusted_Root_G4.pem
+    elasticnode3: Adding debian:GlobalSign_Root_CA_-_R2.pem
+    elasticnode3: Adding debian:LuxTrust_Global_Root_2.pem
+    elasticnode3: Adding debian:AffirmTrust_Commercial.pem
+    elasticnode3: Adding debian:Global_Chambersign_Root_-_2008.pem
+    elasticnode3: Adding debian:GeoTrust_Global_CA.pem
+    elasticnode3: Adding debian:DigiCert_Assured_ID_Root_G3.pem
+    elasticnode3: Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+    elasticnode3: Adding debian:Network_Solutions_Certificate_Authority.pem
+    elasticnode3: Adding debian:OpenTrust_Root_CA_G3.pem
+    elasticnode3: Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+    elasticnode3: Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem
+    elasticnode3: Adding debian:Certplus_Root_CA_G1.pem
+    elasticnode3: Adding debian:Trustis_FPS_Root_CA.pem
+    elasticnode3: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
+    elasticnode3: Adding debian:EC-ACC.pem
+    elasticnode3: Adding debian:AC_RAIZ_FNMT-RCM.pem
+    elasticnode3: Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+    elasticnode3: Adding debian:DST_Root_CA_X3.pem
+    elasticnode3: Adding debian:QuoVadis_Root_CA_3.pem
+    elasticnode3: Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+    elasticnode3: Adding debian:Sonera_Class_2_Root_CA.pem
+    elasticnode3: Adding debian:AffirmTrust_Premium.pem
+    elasticnode3: Adding debian:E-Tugra_Certification_Authority.pem
+    elasticnode1: Adding debian:QuoVadis_Root_CA_2_G3.pem
+    elasticnode1: Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+    elasticnode3: Adding debian:GeoTrust_Primary_Certification_Authority.pem
+    elasticnode1: Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+    elasticnode3: Adding debian:QuoVadis_Root_CA.pem
+    elasticnode1: Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+    elasticnode3: Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+    elasticnode1: Adding debian:Taiwan_GRCA.pem
+    elasticnode3: Adding debian:Certinomis_-_Root_CA.pem
+    elasticnode1: Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+    elasticnode3: Adding debian:Buypass_Class_3_Root_CA.pem
+    elasticnode3: Adding debian:Izenpe.com.pem
+    elasticnode1: Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+    elasticnode1: Adding debian:SwissSign_Gold_CA_-_G2.pem
+    elasticnode3: Adding debian:Go_Daddy_Class_2_CA.pem
+    elasticnode1: Adding debian:CFCA_EV_ROOT.pem
+    elasticnode1: Adding debian:Security_Communication_Root_CA.pem
+    elasticnode1: Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
+    elasticnode1: Adding debian:COMODO_Certification_Authority.pem
+    elasticnode1: Adding debian:COMODO_RSA_Certification_Authority.pem
+    elasticnode1: Adding debian:CA_Disig_Root_R2.pem
+    elasticnode3: done.
+    elasticnode3: Processing triggers for mime-support (3.60ubuntu1) ...
+    elasticnode1: Adding debian:COMODO_ECC_Certification_Authority.pem
+    elasticnode1: Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+    elasticnode1: Adding debian:Certigna.pem
+    elasticnode1: Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
+    elasticnode1: Adding debian:Comodo_AAA_Services_root.pem
+    elasticnode1: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G4.pem
+    elasticnode1: Adding debian:Amazon_Root_CA_2.pem
+    elasticnode1: Adding debian:thawte_Primary_Root_CA_-_G2.pem
+    elasticnode3: Processing triggers for ureadahead (0.100.0-21) ...
+    elasticnode1: Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+    elasticnode1: Adding debian:Certplus_Root_CA_G2.pem
+    elasticnode1: Adding debian:SwissSign_Silver_CA_-_G2.pem
+    elasticnode1: Adding debian:Certplus_Class_2_Primary_CA.pem
+    elasticnode1: Adding debian:Entrust_Root_Certification_Authority.pem
+    elasticnode1: Adding debian:EE_Certification_Centre_Root_CA.pem
+    elasticnode1: Adding debian:DigiCert_Assured_ID_Root_G2.pem
+    elasticnode1: Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+    elasticnode1: Adding debian:AddTrust_External_Root.pem
+    elasticnode1: Adding debian:AffirmTrust_Premium_ECC.pem
+    elasticnode1: Adding debian:Amazon_Root_CA_1.pem
+    elasticnode3: Processing triggers for libc-bin (2.27-3ubuntu1) ...
+    elasticnode1: Adding debian:TrustCor_ECA-1.pem
+    elasticnode1: Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+    elasticnode1: Adding debian:OpenTrust_Root_CA_G2.pem
+    elasticnode1: Adding debian:GlobalSign_Root_CA_-_R3.pem
+    elasticnode1: Adding debian:USERTrust_RSA_Certification_Authority.pem
+    elasticnode1: Adding debian:DigiCert_Global_Root_G3.pem
+    elasticnode1: Adding debian:Cybertrust_Global_Root.pem
+    elasticnode1: Adding debian:Hongkong_Post_Root_CA_1.pem
+    elasticnode1: Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
+    elasticnode1: Adding debian:SZAFIR_ROOT_CA2.pem
+    elasticnode1: Adding debian:TrustCor_RootCert_CA-1.pem
+    elasticnode1: Adding debian:Secure_Global_CA.pem
+    elasticnode1: Adding debian:TWCA_Root_Certification_Authority.pem
+    elasticnode1: Adding debian:DigiCert_Global_Root_G2.pem
+    elasticnode1: Adding debian:QuoVadis_Root_CA_2.pem
+    elasticnode3: Processing triggers for systemd (237-3ubuntu10.31) ...
+    elasticnode1: Adding debian:Deutsche_Telekom_Root_CA_2.pem
+    elasticnode1: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+    elasticnode1: Adding debian:AffirmTrust_Networking.pem
+    elasticnode1: Adding debian:GlobalSign_Root_CA.pem
+    elasticnode1: Adding debian:GeoTrust_Universal_CA.pem
+    elasticnode1: Adding debian:USERTrust_ECC_Certification_Authority.pem
+    elasticnode1: Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+    elasticnode1: Adding debian:Certum_Trusted_Network_CA_2.pem
+    elasticnode1: Adding debian:TeliaSonera_Root_CA_v1.pem
+    elasticnode1: Adding debian:TWCA_Global_Root_CA.pem
+    elasticnode1: Adding debian:Baltimore_CyberTrust_Root.pem
+    elasticnode1: Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+    elasticnode1: Adding debian:Buypass_Class_2_Root_CA.pem
+    elasticnode1: Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+    elasticnode1: Adding debian:DigiCert_Assured_ID_Root_CA.pem
+    elasticnode1: Adding debian:OpenTrust_Root_CA_G1.pem
+    elasticnode1: Adding debian:Security_Communication_RootCA2.pem
+    elasticnode1: Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+    elasticnode1: Adding debian:Atos_TrustedRoot_2011.pem
+    elasticnode1: Adding debian:Amazon_Root_CA_3.pem
+    elasticnode1: Adding debian:XRamp_Global_CA_Root.pem
+    elasticnode1: Adding debian:Visa_eCommerce_Root.pem
+    elasticnode1: Adding debian:Amazon_Root_CA_4.pem
+    elasticnode1: Adding debian:Starfield_Class_2_CA.pem
+    elasticnode1: Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+    elasticnode1: Adding debian:Certum_Trusted_Network_CA.pem
+    elasticnode1: Adding debian:thawte_Primary_Root_CA.pem
+    elasticnode1: Adding debian:ACCVRAIZ1.pem
+    elasticnode1: Adding debian:ePKI_Root_Certification_Authority.pem
+    elasticnode1: Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+    elasticnode1: Adding debian:DigiCert_Global_Root_CA.pem
+    elasticnode1: Adding debian:QuoVadis_Root_CA_3_G3.pem
+    elasticnode1: Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
+    elasticnode1: Adding debian:VeriSign_Class_3_Public_Primary_Certification_Authority_-_G5.pem
+    elasticnode1: Adding debian:thawte_Primary_Root_CA_-_G3.pem
+    elasticnode1: Adding debian:Chambers_of_Commerce_Root_-_2008.pem
+    elasticnode1: Adding debian:ISRG_Root_X1.pem
+    elasticnode1: Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+    elasticnode1: Adding debian:TÜRKTRUST_Elektronik_Sertifika_Hizmet_Sağlayıcısı_H5.pem
+    elasticnode1: Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+    elasticnode1: Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+    elasticnode1: Adding debian:SecureTrust_CA.pem
+    elasticnode1: Adding debian:OISTE_WISeKey_Global_Root_GA_CA.pem
+    elasticnode1: Adding debian:QuoVadis_Root_CA_1_G3.pem
+    elasticnode1: Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+    elasticnode1: Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+    elasticnode1: Adding debian:certSIGN_ROOT_CA.pem
+    elasticnode1: Adding debian:GeoTrust_Universal_CA_2.pem
+    elasticnode3: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+    elasticnode1: Adding debian:TrustCor_RootCert_CA-2.pem
+    elasticnode1: Adding debian:Staat_der_Nederlanden_Root_CA_-_G2.pem
+    elasticnode1: Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+    elasticnode1: Adding debian:Actalis_Authentication_Root_CA.pem
+    elasticnode1: Adding debian:SecureSign_RootCA11.pem
+    elasticnode1: Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+    elasticnode1: Adding debian:DigiCert_Trusted_Root_G4.pem
+    elasticnode1: Adding debian:GlobalSign_Root_CA_-_R2.pem
+    elasticnode1: Adding debian:LuxTrust_Global_Root_2.pem
+    elasticnode1: Adding debian:AffirmTrust_Commercial.pem
+    elasticnode1: Adding debian:Global_Chambersign_Root_-_2008.pem
+    elasticnode1: Adding debian:GeoTrust_Global_CA.pem
+    elasticnode1: Adding debian:DigiCert_Assured_ID_Root_G3.pem
+    elasticnode1: Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+    elasticnode1: Adding debian:Network_Solutions_Certificate_Authority.pem
+    elasticnode1: Adding debian:OpenTrust_Root_CA_G3.pem
+    elasticnode1: Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+    elasticnode1: Adding debian:GeoTrust_Primary_Certification_Authority_-_G3.pem
+    elasticnode1: Adding debian:Certplus_Root_CA_G1.pem
+    elasticnode1: Adding debian:Trustis_FPS_Root_CA.pem
+    elasticnode1: Adding debian:Verisign_Class_3_Public_Primary_Certification_Authority_-_G3.pem
+    elasticnode1: Adding debian:EC-ACC.pem
+    elasticnode1: Adding debian:AC_RAIZ_FNMT-RCM.pem
+    elasticnode1: Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+    elasticnode1: Adding debian:DST_Root_CA_X3.pem
+    elasticnode1: Adding debian:QuoVadis_Root_CA_3.pem
+    elasticnode1: Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+    elasticnode1: Adding debian:Sonera_Class_2_Root_CA.pem
+    elasticnode1: Adding debian:AffirmTrust_Premium.pem
+    elasticnode1: Adding debian:E-Tugra_Certification_Authority.pem
+    elasticnode1: Adding debian:GeoTrust_Primary_Certification_Authority.pem
+    elasticnode1: Adding debian:QuoVadis_Root_CA.pem
+    elasticnode1: Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+    elasticnode1: Adding debian:Certinomis_-_Root_CA.pem
+    elasticnode1: Adding debian:Buypass_Class_3_Root_CA.pem
+    elasticnode1: Adding debian:Izenpe.com.pem
+    elasticnode1: Adding debian:Go_Daddy_Class_2_CA.pem
+    elasticnode1: done.
+    elasticnode1: Processing triggers for mime-support (3.60ubuntu1) ...
+    elasticnode1: Processing triggers for ureadahead (0.100.0-21) ...
+    elasticnode1: Processing triggers for libc-bin (2.27-3ubuntu1) ...
+    elasticnode1: Processing triggers for systemd (237-3ubuntu10.31) ...
+    elasticnode1: Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+    elasticnode2: Processing triggers for ca-certificates (20180409) ...
+    elasticnode2: Updating certificates in /etc/ssl/certs...
+    elasticnode2: 0 added, 0 removed; done.
+    elasticnode2: Running hooks in /etc/ca-certificates/update.d...
+    elasticnode2: done.
+    elasticnode2: done.
+    elasticnode3: Processing triggers for ca-certificates (20180409) ...
+    elasticnode3: Updating certificates in /etc/ssl/certs...
+    elasticnode3: 0 added, 0 removed; done.
+    elasticnode3: Running hooks in /etc/ca-certificates/update.d...
+    elasticnode1: Processing triggers for ca-certificates (20180409) ...
+    elasticnode1: Updating certificates in /etc/ssl/certs...
+    elasticnode3: done.
+    elasticnode3: done.
+    elasticnode1: 0 added, 0 removed; done.
+    elasticnode1: Running hooks in /etc/ca-certificates/update.d...
+    elasticnode2: Warning: apt-key output should not be parsed (stdout is not a terminal)
+    elasticnode1: done.
+    elasticnode1: done.
+    elasticnode2: OK
+    elasticnode2: Hit:1 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    elasticnode2: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    elasticnode2: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    elasticnode3: Warning: apt-key output should not be parsed (stdout is not a terminal)
+    elasticnode2: Get:4 https://artifacts.elastic.co/packages/7.x/apt stable InRelease [7,124 B]
+    elasticnode2: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    elasticnode2: Get:6 https://artifacts.elastic.co/packages/7.x/apt stable/main i386 Packages [17.5 kB]
+    elasticnode2: Get:7 https://artifacts.elastic.co/packages/7.x/apt stable/main amd64 Packages [21.9 kB]
+    elasticnode3: OK
+    elasticnode1: Warning: apt-key output should not be parsed (stdout is not a terminal)
+    elasticnode1: OK
+    elasticnode3: Hit:1 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    elasticnode3: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    elasticnode3: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    elasticnode3: Get:4 https://artifacts.elastic.co/packages/7.x/apt stable InRelease [7,124 B]
+    elasticnode3: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    elasticnode3: Get:6 https://artifacts.elastic.co/packages/7.x/apt stable/main amd64 Packages [21.9 kB]
+    elasticnode3: Get:7 https://artifacts.elastic.co/packages/7.x/apt stable/main i386 Packages [17.5 kB]
+    elasticnode1: Hit:1 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    elasticnode1: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    elasticnode1: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    elasticnode1: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    elasticnode1: Get:5 https://artifacts.elastic.co/packages/7.x/apt stable InRelease [7,124 B]
+    elasticnode1: Get:6 https://artifacts.elastic.co/packages/7.x/apt stable/main amd64 Packages [21.9 kB]
+    elasticnode1: Get:7 https://artifacts.elastic.co/packages/7.x/apt stable/main i386 Packages [17.5 kB]
+    elasticnode2: Fetched 46.5 kB in 1s (43.3 kB/s)
+    elasticnode2: Reading package lists...
+    elasticnode3: Fetched 46.5 kB in 1s (42.3 kB/s)
+    elasticnode3: Reading package lists...
+    elasticnode2: Hit:1 https://artifacts.elastic.co/packages/7.x/apt stable InRelease
+    elasticnode2: Hit:2 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    elasticnode2: Hit:3 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    elasticnode2: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    elasticnode2: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    elasticnode2: Reading package lists...
+    elasticnode1: Fetched 46.5 kB in 2s (22.9 kB/s)
+    elasticnode1: Reading package lists...
+    elasticnode3: Hit:1 https://artifacts.elastic.co/packages/7.x/apt stable InRelease
+    elasticnode3: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    elasticnode3: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    elasticnode3: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    elasticnode3: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    elasticnode3: Reading package lists...
+    elasticnode2: Reading package lists...
+    elasticnode2: Building dependency tree...
+    elasticnode2: Reading state information...
+    elasticnode1: Hit:1 https://artifacts.elastic.co/packages/7.x/apt stable InRelease
+    elasticnode2: The following NEW packages will be installed:
+    elasticnode2:   elasticsearch
+    elasticnode2: 0 upgraded, 1 newly installed, 0 to remove and 34 not upgraded.
+    elasticnode2: Need to get 289 MB of archives.
+    elasticnode2: After this operation, 488 MB of additional disk space will be used.
+    elasticnode2: Get:1 https://artifacts.elastic.co/packages/7.x/apt stable/main amd64 elasticsearch amd64 7.4.2 [289 MB]
+    elasticnode1: Hit:2 http://security.ubuntu.com/ubuntu bionic-security InRelease
+    elasticnode1: Hit:3 http://us.archive.ubuntu.com/ubuntu bionic InRelease
+    elasticnode1: Hit:4 http://us.archive.ubuntu.com/ubuntu bionic-updates InRelease
+    elasticnode3: Reading package lists...
+    elasticnode3: Building dependency tree...
+    elasticnode1: Hit:5 http://us.archive.ubuntu.com/ubuntu bionic-backports InRelease
+    elasticnode1: Reading package lists...
+    elasticnode3: Reading state information...
+    elasticnode3: The following NEW packages will be installed:
+    elasticnode3:   elasticsearch
+    elasticnode3: 0 upgraded, 1 newly installed, 0 to remove and 34 not upgraded.
+    elasticnode3: Need to get 289 MB of archives.
+    elasticnode3: After this operation, 488 MB of additional disk space will be used.
+    elasticnode3: Get:1 https://artifacts.elastic.co/packages/7.x/apt stable/main amd64 elasticsearch amd64 7.4.2 [289 MB]
+    elasticnode1: Reading package lists...
+    elasticnode1: Building dependency tree...
+    elasticnode1: Reading state information...
+    elasticnode1: The following NEW packages will be installed:
+    elasticnode1:   elasticsearch
+    elasticnode1: 0 upgraded, 1 newly installed, 0 to remove and 34 not upgraded.
+    elasticnode1: Need to get 289 MB of archives.
+    elasticnode1: After this operation, 488 MB of additional disk space will be used.
+    elasticnode1: Get:1 https://artifacts.elastic.co/packages/7.x/apt stable/main amd64 elasticsearch amd64 7.4.2 [289 MB]
+    elasticnode3: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    elasticnode3: Fetched 289 MB in 19s (15.1 MB/s)
+    elasticnode3: Selecting previously unselected package elasticsearch.
+    elasticnode3: (Reading database ... 
+    elasticnode3: (Reading database ... 5%
+    elasticnode3: (Reading database ... 10%
+    elasticnode3: (Reading database ... 15%
+    elasticnode3: (Reading database ... 20%
+    elasticnode3: (Reading database ... 25%
+    elasticnode3: (Reading database ... 30%
+    elasticnode3: (Reading database ... 35%
+    elasticnode3: (Reading database ... 40%
+    elasticnode3: (Reading database ... 45%
+    elasticnode3: (Reading database ... 50%
+    elasticnode3: (Reading database ... 55%
+    elasticnode3: (Reading database ... 60%
+    elasticnode3: (Reading database ... 65%
+    elasticnode3: (Reading database ... 70%
+    elasticnode3: (Reading database ... 75%
+    elasticnode3: (Reading database ... 80%
+    elasticnode3: (Reading database ... 85%
+    elasticnode3: (Reading database ... 90%
+    elasticnode3: (Reading database ... 95%
+    elasticnode3: (Reading database ... 100%
+    elasticnode3: (Reading database ... 
+    elasticnode3: 106877 files and directories currently installed.)
+    elasticnode3: Preparing to unpack .../elasticsearch_7.4.2_amd64.deb ...
+    elasticnode3: Creating elasticsearch group...
+    elasticnode3:  OK
+    elasticnode3: Creating elasticsearch user...
+    elasticnode3:  OK
+    elasticnode3: Unpacking elasticsearch (7.4.2) ...
+    elasticnode2: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    elasticnode2: Fetched 289 MB in 23s (12.7 MB/s)
+    elasticnode2: Selecting previously unselected package elasticsearch.
+    elasticnode2: (Reading database ... 
+    elasticnode2: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%
+    elasticnode2: (Reading database ... 55%
+    elasticnode2: (Reading database ... 60%
+    elasticnode2: (Reading database ... 65%
+    elasticnode2: (Reading database ... 70%
+    elasticnode2: (Reading database ... 75%
+    elasticnode2: (Reading database ... 80%
+    elasticnode2: (Reading database ... 85%
+    elasticnode2: (Reading database ... 90%
+    elasticnode2: (Reading database ... 95%
+    elasticnode2: (Reading database ... 100%(Reading database ... 106877 files and directories currently installed.)
+    elasticnode2: Preparing to unpack .../elasticsearch_7.4.2_amd64.deb ...
+    elasticnode2: Creating elasticsearch group...
+    elasticnode2:  OK
+    elasticnode2: Creating elasticsearch user...
+    elasticnode2:  OK
+    elasticnode2: Unpacking elasticsearch (7.4.2) ...
+    elasticnode3: Setting up elasticsearch (7.4.2) ...
+    elasticnode2: Setting up elasticsearch (7.4.2) ...
+    elasticnode1: dpkg-preconfigure: unable to re-open stdin: No such file or directory
+    elasticnode1: Fetched 289 MB in 24s (11.9 MB/s)
+    elasticnode3: Created elasticsearch keystore in /etc/elasticsearch
+    elasticnode1: Selecting previously unselected package elasticsearch.
+    elasticnode1: (Reading database ... 
+    elasticnode1: (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%
+    elasticnode3: Processing triggers for ureadahead (0.100.0-21) ...
+    elasticnode1: (Reading database ... 60%(Reading database ... 65%(Reading database ... 70%
+    elasticnode1: (Reading database ... 75%
+    elasticnode1: (Reading database ... 80%
+    elasticnode1: (Reading database ... 85%
+    elasticnode1: (Reading database ... 90%
+    elasticnode1: (Reading database ... 95%
+    elasticnode1: (Reading database ... 100%(Reading database ... 106877 files and directories currently installed.)
+    elasticnode1: Preparing to unpack .../elasticsearch_7.4.2_amd64.deb ...
+    elasticnode3: Processing triggers for systemd (237-3ubuntu10.31) ...
+    elasticnode1: Creating elasticsearch group...
+    elasticnode1:  OK
+    elasticnode1: Creating elasticsearch user...
+    elasticnode1:  OK
+    elasticnode1: Unpacking elasticsearch (7.4.2) ...
+    elasticnode2: Created elasticsearch keystore in /etc/elasticsearch
+    elasticnode2: Processing triggers for ureadahead (0.100.0-21) ...
+    elasticnode2: Processing triggers for systemd (237-3ubuntu10.31) ...
+    elasticnode3: Synchronizing state of elasticsearch.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    elasticnode3: Executing: /lib/systemd/systemd-sysv-install enable elasticsearch
+    elasticnode3: Created symlink /etc/systemd/system/multi-user.target.wants/elasticsearch.service → /usr/lib/systemd/system/elasticsearch.service.
+    elasticnode2: Synchronizing state of elasticsearch.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    elasticnode2: Executing: /lib/systemd/systemd-sysv-install enable elasticsearch
+    elasticnode2: Created symlink /etc/systemd/system/multi-user.target.wants/elasticsearch.service → /usr/lib/systemd/system/elasticsearch.service.
+    elasticnode1: Setting up elasticsearch (7.4.2) ...
+    elasticnode1: Created elasticsearch keystore in /etc/elasticsearch
+    elasticnode1: Processing triggers for ureadahead (0.100.0-21) ...
+    elasticnode1: Processing triggers for systemd (237-3ubuntu10.31) ...
+    elasticnode1: Synchronizing state of elasticsearch.service with SysV service script with /lib/systemd/systemd-sysv-install.
+    elasticnode1: Executing: /lib/systemd/systemd-sysv-install enable elasticsearch
+    elasticnode1: Created symlink /etc/systemd/system/multi-user.target.wants/elasticsearch.service → /usr/lib/systemd/system/elasticsearch.service.
+Testing elasticnode1...
+[1G   Check Node Name[K[149G1/6[2G[1G ✓ Check Node Name[K
+[0m[1G   Check Cluster Name[K[149G2/6[2G[1G ✓ Check Cluster Name[K
+[0m[1G   Check Cluster Status[K[149G3/6[2G[1G ✓ Check Cluster Status[K
+[0m[1G   Insert and Read 10 items[K[149G4/6[2G[1G ✓ Insert and Read 10 items[K
+[0m[1G   Delete all[K[149G5/6[2G[1G ✓ Delete all[K
+[0m[1G   Implicit Insert and Read 10 items[K[149G6/6[2G[1G ✓ Implicit Insert and Read 10 items[K
+[0m
+6 tests, 0 failures
+Connection to 192.168.121.131 closed.
+Testing elasticnode2...
+[1G   Check Node Name[K[149G1/6[2G[1G ✓ Check Node Name[K
+[0m[1G   Check Cluster Name[K[149G2/6[2G[1G ✓ Check Cluster Name[K
+[0m[1G   Check Cluster Status[K[149G3/6[2G[1G ✓ Check Cluster Status[K
+[0m[1G   Insert and Read 10 items[K[149G4/6[2G[1G ✓ Insert and Read 10 items[K
+[0m[1G   Delete all[K[149G5/6[2G[1G ✓ Delete all[K
+[0m[1G   Implicit Insert and Read 10 items[K[149G6/6[2G[1G ✓ Implicit Insert and Read 10 items[K
+[0m
+6 tests, 0 failures
+Connection to 192.168.121.221 closed.
+Testing elasticnode3...
+[1G   Check Node Name[K[149G1/6[2G[1G ✓ Check Node Name[K
+[0m[1G   Check Cluster Name[K[149G2/6[2G[1G ✓ Check Cluster Name[K
+[0m[1G   Check Cluster Status[K[149G3/6[2G[1G ✓ Check Cluster Status[K
+[0m[1G   Insert and Read 10 items[K[149G4/6[2G[1G ✓ Insert and Read 10 items[K
+[0m[1G   Delete all[K[149G5/6[2G[1G ✓ Delete all[K
+[0m[1G   Implicit Insert and Read 10 items[K[149G6/6[2G[1G ✓ Implicit Insert and Read 10 items[K
+[0m
+6 tests, 0 failures
+Connection to 192.168.121.15 closed.
+STOP:  Thu 7 Nov 17:29:32 GMT 2019
